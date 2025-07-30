@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /*MAPA DE JUSTIFY CONTENT*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Figtree", serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -172,7 +173,7 @@ footer {
     padding-bottom: 5vh;
   }
   .elProceso {
-    justify-content: space-around !important;
+    justify-content: center !important;
     align-items: center !important;
   }
   .siguienteYAnterior {
@@ -422,12 +423,6 @@ footer {
   height: 100%;
   background-color: transparent;
   pointer-events: none;
-}
-
-@media screen and (max-width: 481px) {
-  .imgProceso {
-      width: 43%;
-  }
 }
 
 /*SECCIONES DE EMPATIZAR, DEFINIR, IDEAR Y PROTOTIPAR -------------------------*/
@@ -692,12 +687,6 @@ input[type=checkbox] {
   padding: 5vh;
   box-sizing: border-box;
   margin: 0;
-}
-@media screen and (max-width: 850px) {
-  .textoConclusion{
-    p{font-size: 1.2rem;}
-    
-  }
 }
 
 /*SIGUIENTE Y ANTERIOR PROYECTO ESTILOS --------------------------------------------------- */
@@ -1081,7 +1070,6 @@ button[type=submit] {
   .formYdescripcionpeque {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
   }
 }
 @media (max-width: 954px) {
@@ -1091,15 +1079,12 @@ button[type=submit] {
 }
 @media (max-width: 492px) {
   input[type=text], input[type=email], .form_input--message, button[type=submit] {
-    width: 100%;
+    width: 20rem;
   }
   form {
     justify-content: center;
     align-items: center;
   }
-  .descripcionFormulario {
-  margin-top: 5vh;
-}
 }
 /*CONTENEDOR DE IMAGEN Y DESCRIPCION EN LA SECCION DE CONOCEME-----------------------------*/
 .imagenYdescripcion {
@@ -1166,9 +1151,6 @@ button[type=submit] {
     flex-direction: column !important;
     gap: 5vh;
   }
-  .numero-Correo {
-  gap: 3vh;
-}
 }
 /*MI TRAYECTORIA ---------------------------------------------------*/
 .containerTarjetas {
@@ -1245,15 +1227,4 @@ button[type=submit] {
     flex-wrap: wrap;
     gap: 5vh;
   }
-}
-
-@media screen and (max-width: 850px) {
-    p{font-size: 1.5rem !important;}
-    .logommvi{
-      img{
-        width: 70%; height: 70%;
-      }
-    }
-    header{padding-top: 1vh; padding-bottom: 1vh;}
-    h1{font-size: 6rem !important;}
-}
+}/*# sourceMappingURL=estilos.css.map */
