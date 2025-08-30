@@ -1,5 +1,4 @@
-$color-morado: #955AB1;
-$color-hover: #301F36;
+
 $unoPuntoCinco-rem: 1.5rem;
 $center: center;
 $wrap: wrap;
@@ -13,6 +12,12 @@ $alineacion:(
     "space-evenly": space-evenly,
     "start": start,
     "end": end,
+);
+
+$colores:(
+    "rosa": #F2D9EE,
+    "oscuro": #3A2C39,
+    "interaccion": #955AB1,
 );
 
 $viewHeight:(

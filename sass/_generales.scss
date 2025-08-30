@@ -1,84 +1,184 @@
-html {
-    font-size: 1rem; 
-  }
 
-  @media (max-width: 500px) { 
-    html {
-      font-size: 1rem * 0.7; 
-    }
-  }
-  /*-------------------- SEPARADOR----------------------------*/
-
-hr{
-    margin-top: 10%; margin-bottom: 10%;
-    background-color: $color-hover !important;
-    width: 100%; height: 1vh;
+main{
+    background-color: map-get($colores, oscuro );
+    overflow-x: hidden;
+}
+.fondo{
+    background-color: map-get($colores, oscuro );
 }
 
-/*DARLE COLOR MORADO A LAS LETRAS EN CASO DE NECESITARSE-------------------------------------------------------*/
-.colorMorado{
-    color: $color-morado;
+//TEXTOS-----------------------------------------------
+h2{
+    font-size: 2.5rem;
+    font-weight: 650;
 }
-
-/*ESTILO DEL BOTON DEL PROTOTIPO ------------------------------------------------------------*/
-
-.botonPrototipo{
-    background-color: $color-morado;
-    width: fit-content;
-    padding-left: map-get($viewHeight, tres ); padding-right: map-get($viewHeight, tres ); padding-top: map-get($viewHeight, dos ); padding-bottom: map-get($viewHeight, dos );
-    margin: 0 auto;
-    cursor: url(../assets/img/cursorMano.png), auto;
-    a{
-        color: #f9f9f9;
-        cursor: url(../assets/img/cursorMano.png), auto;
-    }
+h1{
+    font-size: 4rem;
+    color: #3A2C39;
 }
-.botonPrototipo:hover{
-    background-color: $color-hover;
-    a{
-        color: #f9f9f9;
-    }
+h3{
+    color: map-get($colores, rosa );
 }
-
-.redYNombre{
-    cursor: url(../assets/img/cursorMano.png), auto;
+.h2claro{
+    color: map-get($colores, rosa );
 }
-
-/*BOTONES ------------------------------------*/
- 
-.boton {
-    a{
-        font-size: 2rem;
-     color: #f9f9f9;
-     font-weight: 600;
-     text-decoration: none;
-     background-color: $color-morado;
-     padding-left: 6%; padding-right: 6%; padding-top: 4%; padding-bottom: 4%;
-     &:hover{
-        background-color: $color-hover;
-     }
-    }
-     
- }
-
-/*SUBRAYADO DE PALABRAS ---------------------- */
-.subrayado{
-    position: relative;
-    display: inline-block;
-
-    img{
-        position: absolute;
-        bottom: 0%;
-        width: 100%;
-        right: 0%;
-    }
+p{
+   color: map-get($colores, rosa );
+   font-size: 1.5rem;
+}
+.tamano-texto-lista{
+    font-size: 1.5rem;
 }
 
 
-/*PARTE ROSADA DE LA SECCIÓN DE QUE SE QUIERE LOGRAR-------------------------------*/
-.parteRosada{
-    gap: 3%;
-    background-color: #EBBFF0;
-    width: 100%;
-    padding-left: 5%; padding-right: 5%; padding-top: 2%; padding-bottom: 2%;
+
+//SEPARADORES---------------------------------------------
+.separadortop{
+    margin-top: 12vh;
+}
+.separadorSecciones{
+    margin-top: 6vh;
+}
+.margenesLados{
+    padding: 0 16vh 0 16vh;
+}
+
+//BOTONES -----------------------------------------------------------------
+.btn-secondary {
+  --bs-btn-color: #955AB1;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #955AB1;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3A2C39;
+  --bs-btn-hover-border-color: #3A2C39;
+  border-radius: 5px;
+  border-width: 3px;
+  font-weight: 500;
+  display: flex; 
+  gap: 2vh; 
+  align-items: center; 
+  justify-content: center;
+  padding: 1.5vh 0;
+}
+.btn-primary {
+  background-color: map-get($colores, interaccion ) !important;
+  color: map-get($colores, rosa);
+  font-weight: 500;
+  border-color: map-get($colores, interaccion ) !important;
+  display: flex; gap: 2vh; align-items: center; justify-content: center;
+padding: 1.5vh 0 1.5vh 0;
+}
+.btn-link{
+    color: map-get($colores, rosa );
+    font-weight: 700;
+    font-weight: 2rem;
+}
+.btn-link:hover{
+    color: map-get($colores, interaccion );
+}
+
+// MEDIA QUERIES ---------------------------------------------------------
+
+@media (max-width: 1025px) {
+  .margenesLados{
+    padding: 0 8vh 0 8vh;
+}
+}
+@media (max-width: 768px) {
+  .margenesLados{
+    padding: 0 5vh 0 5vh;
+}
+}
+@media (max-width: 426px) {
+  .margenesLados{
+    padding: 0 2vh 0 2vh;
+}
+.separadorSecciones{
+    margin-top: 3vh;
+}
+.separadortop{
+    margin-top: 8vh;
+}
+.tituloenceluh1{
+    font-size: 2.2rem;
+    text-align: center;
+}
+.tituloenceluh2{
+    font-size: 1.7rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.7rem;
+}
+p{
+   font-size: 1.2rem;
+}
+.tamano-texto-lista{
+    font-size: 1.2rem;
+}
+.btn-secondary{
+    background-color: map-get($colores, rosa );
+    border-radius: 5px;
+    border: 2px solid map-get($colores, interaccion );
+    color: map-get($colores, interaccion );
+    font-weight: 500;
+    display: flex; gap: 2vh; align-items: center; justify-content: center;
+    padding: 1.5vh 0 1.5vh 0;
+}
+.btn-secondary:hover{
+    background-color: #3A2C39 !important;
+}
+
+.btn-primary {
+  background-color: map-get($colores, interaccion ) !important;
+  color: map-get($colores, rosa);
+  font-weight: 500;
+  border-color: map-get($colores, interaccion ) !important;
+  display: flex; gap: 2vh; align-items: center; justify-content: center;
+padding: 1.5vh 0 1.5vh 0;
+width: 90vw;
+}
+}
+
+@media (max-width: 376px) {
+    .tituloenceluh1{
+    font-size: 2rem;
+    text-align: center;
+}
+.tituloenceluh2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+}
+p{
+   font-size: 1rem;
+}
+.tamano-texto-lista{
+    font-size: 1rem;
+}
+}
+
+@media (max-width: 321px) {
+    .tituloenceluh1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.tituloenceluh2{
+    font-size: 1rem;
+    text-align: center;
+}
+h2{
+    font-size: 1rem;
+}
+p{
+   font-size: 0.8rem;
+}
+.tamano-texto-lista{
+    font-size: .8rem;
+}
+.btn-link{
+    font-weight: .8rem;
+}
 }

@@ -1,55 +1,111 @@
-
-/*IMAGEN LOGO DEL HEADER CON EL TAMAÑO AJUSTADO-------------------------------------------------------*/
-.navbar-brand{
-    img{
-        height: map-get($viewHeight, siete );
+header{
+    background-color: map-get($colores, rosa );
+    padding: 5vh 16vh 2vh 16vh;
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+            .dropdown-toggle{
+            color: map-get($colores, oscuro );
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: row;
+            gap: 1vw;
+            }
     }
 }
 
-/*LAS LETRAS DE LAS OPCIONES DEL HEADER CAMBIAN SU GROSOR----------------------------------------------------*/
-.nav-link{
-    font-weight: 550;
-    &:hover{
-        color: $color-hover;
-    }
+.dropdown-toggle::after {
+  display: none;
 }
 
-/*ESTILO PERSONALIZADO DEL MENÚ DE HAMBURGUESA DEL HEADER (RESPONSIVE)----------------------------------------------*/
-.navbar-toggler {
-    border: none;
-    .navbar-toggler-icon{
-        width: $unoPuntoCinco-rem;
-        height: $unoPuntoCinco-rem;
-        background-image: url(../assets/img/menuHamburguesa.svg);
-    }
-  }
-
-.estiloMenuHamburguesa{
-    background-color: $color-morado;
-    width: 100%;
-   
-    li{
-        a{
-            color: #f9f9f9;
-            
-        }
-    }
+.icono-dropdown{
+    width: 20px;
 }
 
-/*ESTILO DEL BOTÓN CONTÁCTAME DEL HEADER------------------------------------------------------------------------*/
-#contactameBoton{
-    background-color: $color-morado;
-    padding: map-get($viewHeight, dos );
-    color: #f9f9f9;
-    font-weight: 550;
-    &:hover{
-        background-color: $color-hover;
-    }
+.dropdown-toggle[aria-expanded="true"] .icono-dropdown {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.menuHeader{
+  display: flex;
+  gap: 50%;
+}
+
+#headerProyectos{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; 
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+#headerProyectos.shrink {
+  height: 50px;           /* altura al hacer scroll */
+  padding: 5vh 16vh 4vh 16vh;
+}
+
+/* Cuando el header se encoge */
+#headerProyectos.shrink {
+  height: 50px;
+  padding: 1vh 16vh;
+}
+
+#headerProyectos.shrink .navbar-brand img {
+  height: 40px; /* Logo más pequeño */
+}
+
+#headerProyectos.shrink .cerrar img {
+  height: 30px !important; /* Logo más pequeño */
 }
 
 /* ------------------------------------------------- FOOTER ------------------------------------------------------*/
 
 footer{
-    padding-top: 2%; padding-bottom: 2%; 
-    margin-top: map-get($viewHeight, quince );
+    padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    background-color: map-get($colores, rosa );
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+    row-gap: 5vh;
+    align-items: center;
+}
+footer p{
+  color: map-get($colores, oscuro);
+}
+.logosfooter img{
+  width: 8vh;
+}
+.logosfooter{
+  display: flex;
+  gap: 4vh;
+}
+//MEDIA QUERIES-----------------------------------------
+@media (max-width: 1025px) {
+  header{
+    padding: 5vh 8vh 5vh 8vh;
+}    
+}
+@media (max-width: 768px) {
+  header{
+    padding: 3vh 8vh 3vh 5vh;
+}
+/* Cuando el header se encoge */
+#headerProyectos.shrink {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+#headerProyectos.shrink .dropdown {
+  padding-left: 5vh;
+}
+
 }
