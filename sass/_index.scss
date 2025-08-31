@@ -343,7 +343,7 @@ button[type=submit] {
 }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
 input[type=text], input[type=email], button[type=submit] {
   width: 22rem;
   height: 3rem;
@@ -377,6 +377,7 @@ button[type=submit] {
   position: absolute;
   top: 90px; right: 0px;
   width: 200px;
+  margin-top: 4vh;
   height: fit-content;
   width: fit-content;
   overflow-x: hidden;
