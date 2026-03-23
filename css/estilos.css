@@ -1247,8 +1247,12 @@ footer{
       }
        .form-row {
       display: flex;
-      flex-direction: column;
+      flex-direction: column !important;
       gap: 12px;
+      width: 100%;
+    }
+    #contactForm{
+      width: 82vw;
     }
     }
 
@@ -1336,7 +1340,7 @@ footer{
       display: flex;
       flex-direction: column;
       gap: 12px;
-      width: 100%;
+      width: 50vw;
     }
  
     .form-row {
