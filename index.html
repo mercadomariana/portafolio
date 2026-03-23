@@ -864,5 +864,22 @@ form.addEventListener("submit", async e => {
   video.muted = true;
   video.play().catch(() => {});
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector(".hero-img");
+
+    if (video) {
+      video.muted = true;
+      video.setAttribute("muted", "");
+      video.play().catch(() => {
+        // fallback: intenta reproducir después de interacción
+        document.addEventListener("touchstart", () => {
+          video.play();
+        }, { once: true });
+      });
+    }
+  });
+</script>
   </body>
 </html>
