@@ -49,7 +49,6 @@
           <div class="lang-dropdown" id="langDropdown">
             <a href="#" data-lang="es">ES</a>
             <a href="#" data-lang="en">EN</a>
-            <a href="#" data-lang="pt">PT</a>
           </div>
         </div>
       </div>
@@ -92,7 +91,7 @@
         </div>
       </div>
       <div class="hero-image-wrap">
-        <video class="hero-img" autoplay loop muted playsinline>
+        <video class="hero-img" autoplay loop muted playsinline webkit-playsinline preload="auto">
           <source src="./assets/video/videoHome.mp4" type="video/mp4">
         </video>
       </div>
@@ -383,9 +382,9 @@
     </a>
 
     <div class="footer-nav">
-      <a href=""><p>Proyectos</p></a>
-      <a href=""><p>Sobre mí</p></a>
-      <a href=""><p>Contacto</p></a>
+      <a href="#proyectos"><p>Proyectos</p></a>
+      <a href="#sobremi"><p>Sobre mí</p></a>
+      <a href="#contacto"><p>Contacto</p></a>
     </div>
     
 
@@ -858,6 +857,12 @@ form.addEventListener("submit", async e => {
     }, 400);
   }
 });
+</script>
+
+<script>
+  const video = document.getElementById("video");
+  video.muted = true;
+  video.play().catch(() => {});
 </script>
   </body>
 </html>
