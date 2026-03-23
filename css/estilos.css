@@ -1245,6 +1245,11 @@ footer{
       .card2-image-placeholder {
         min-height: 320px;
       }
+       .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
     }
 
     /*SECCIÓN DE CONTACTO---------------------------------*/
