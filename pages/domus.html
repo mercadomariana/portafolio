@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="es" style="overflow-x: hidden;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portafolio de Mariana Mercado, enfocada en el diseño ux/ui y en el desarrollo web front-end">
+    <meta name="keywords" content="PROYECTOS, PORTAFOLIO, TRABAJO, FREELANCE, CONTACTAME, CONOCEME, MARIANA MERCADO, ESTUDIANTE, DISEÑO UX/UI, DESARROLLO WEB, FRONT-END, TRABAJADORA, DISEÑADORA, DESARROLLADOR, DESARROLLADORA">
+    <title>Portafolio | Mariana Mercado</title>
+    <link rel="icon" href="../favicon.ico" type="image/png">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+  </head>
+  <body>
+
+  <div class="headerProyectos">
+    <header>
+      <div class="header-left">
+        <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="logo" aria-label="MVI Home">
+          <img src="../favicon.ico" alt="logo">
+        </a>
+      </div>
+      <nav>
+        <a href="../index.html#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+        <a href="../index.html#sobre-mi"  data-i18n="nav_sobre">Sobre mí</a>
+        <a href="../index.html#contacto"  data-i18n="nav_contacto">Contacto</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang-container">
+          <div class="lang" id="langBtn" role="button" aria-expanded="false" tabindex="0">
+            <span id="currentLang">ES</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#2a1f2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" data-lang="es">ES</a>
+            <a href="#" data-lang="en">EN</a>
+            <a href="#" data-lang="pt">PT</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-panel">
+      <a href="../index.html#proyectos"><span class="dot"></span><span data-i18n="nav_proyectos">Proyectos</span></a>
+      <a href="../index.html#sobre-mi"><span class="dot"></span><span data-i18n="nav_sobre">Sobre mí</span></a>
+      <a href="../index.html#contacto"><span class="dot"></span><span data-i18n="nav_contacto">Contacto</span></a>
+      <div class="mobile-divider"></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="project-hero">
+    <div class="project-hero-left">
+      <span class="project-year">2026</span>
+      <h1 class="project-title" data-i18n="hero_title">Domus –<br>Rediseño web</h1>
+      <div class="card-tags">
+        <span class="tag tagsRosados">UX/UI</span>
+        <span class="tag tagsRosados" data-i18n="tag_frontend">Desarrollo Front-end</span>
+        <span class="tag tagsRosados">HTML/CSS</span>
+        <span class="tag tagsRosados">Bootstrap</span>
+        <span class="tag tagsRosados" data-i18n="tag_real">Proyecto real</span>
+      </div>
+      <a href="https://jazminramirezlandazabal.com/" target="_blank" class="btn">
+        <span data-i18n="btn_web">Acceder a web</span> <span class="btn-arrow">↗</span>
+      </a>
+    </div>
+    <div class="project-hero-right">
+      <img src="../assets/img/domus/portada.svg" alt="Mockup Domus"/>
+    </div>
+  </section>
+
+  <!-- STICKY NAV -->
+  <div class="project-nav-wrap">
+    <nav class="project-nav">
+      <a href="#contexto"         class="project-nav-link active" data-i18n="nav_contexto">Contexto</a>
+      <a href="#problema"         class="project-nav-link"        data-i18n="nav_problema">Problema</a>
+      <a href="#identidad-visual" class="project-nav-link"        data-i18n="nav_identidad">Identidad Visual</a>
+      <a href="#proceso"          class="project-nav-link"        data-i18n="nav_proceso">Proceso</a>
+      <a href="#resultados"       class="project-nav-link"        data-i18n="nav_resultados">Resultados</a>
+      <a href="#retos"            class="project-nav-link"        data-i18n="nav_retos">Retos y Logros</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- 01. CONTEXTO -->
+    <section class="project-section" id="contexto">
+      <div class="project-section-header">
+        <span class="project-section-num">01.</span>
+        <h2 class="project-section-title" data-i18n="nav_contexto">Contexto</h2>
+      </div>
+      <div class="project-cards">
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="c1_label">¿Qué es Domus?</p>
+          <p class="project-card-title" data-i18n="c1_title">Espacio de psicología especializado en neurodivergencia</p>
+          <p class="project-card-desc"  data-i18n="c1_desc">Acompañamiento a niños y adolescentes dentro del espectro autista. Método principal: Terapia Basada en Lego, un enfoque poco común que combina el juego con el desarrollo de habilidades sociales.</p>
+        </div>
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="c2_label">¿Qué necesitaban?</p>
+          <p class="project-card-title" data-i18n="c2_title">Rediseñar el sitio web desde cero</p>
+          <p class="project-card-desc"  data-i18n="c2_desc">El objetivo era crear una presencia digital que comunicara la esencia del espacio: profesional y cercano a la vez. Un sitio que hablara a familias, profesionales de la salud e instituciones educativas en simultáneo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. EL PROBLEMA -->
+    <section class="project-section" id="problema">
+      <div class="project-section-header">
+        <span class="project-section-num">02.</span>
+        <h2 class="project-section-title" data-i18n="nav_problema">El Problema</h2>
+      </div>
+      <div class="project-cards-row">
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p1_title">Servicios invisibles</p>
+          <p class="project-card-desc"  data-i18n="p1_desc">Secciones anidadas que impedían entender la amplitud de la propuesta más allá de la Terapia con LEGO.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p2_title">CV en lugar de espacio</p>
+          <p class="project-card-desc"  data-i18n="p2_desc">El contenido hablaba de la trayectoria de la creadora, no del espacio ni de lo que hace por sus pacientes.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p3_title">Sin identidad propia</p>
+          <p class="project-card-desc"  data-i18n="p3_desc">Sitio construido sobre una plantilla genérica sin ninguna adaptación visual que reflejara la personalidad de Domus.</p>
+        </div>
+      </div>
+      <div class="project-cards-row">
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p4_title">Sin valor diferencial</p>
+          <p class="project-card-desc"  data-i18n="p4_desc">No quedaba claro por qué elegir Domus frente a otras terapias similares en Buenos Aires.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p5_title">Formulario genérico</p>
+          <p class="project-card-desc"  data-i18n="p5_desc">El contacto no diferenciaba el tipo de consulta, generando trabajo innecesario para la profesional.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTA GUÍA -->
+    <section class="project-question">
+      <img class="project-question-deco" src="../assets/img/domus/deco-right.svg" alt="">
+      <div>
+        <p class="project-question-label" data-i18n="pregunta_label">Pregunta guía del proyecto</p>
+        <p class="project-question-text"  data-i18n="pregunta_text">¿Cómo mostrar Domus como el espacio terapéutico profesional y cercano que realmente es?</p>
+      </div>
+      <img class="project-question-deco" src="../assets/img/domus/deco-left.svg" alt="">
+    </section>
+
+    <div class="project-lila-bg">
+
+      <!-- 03. IDENTIDAD VISUAL -->
+      <section class="project-section d-flex flex-column" id="identidad-visual">
+        <div>
+          <div class="project-section-header" style="margin-top:0; margin-bottom:0;">
+            <span class="project-section-num">03.</span>
+            <h2 class="project-section-title" data-i18n="nav_identidad">Identidad visual</h2>
+          </div>
+        </div>
+        <div class="identidadytexto">
+          <div class="textoIdentidad">
+            <p class="project-identity-desc" data-i18n="identidad_intro">Palabras clave que guiaron el diseño:</p>
+            <div class="card-tags">
+              <span class="tag" data-i18n="tag_lego">Terapia Basada en Lego</span>
+              <span class="tag" data-i18n="tag_encuentro">Encuentro</span>
+              <span class="tag" data-i18n="tag_grupo">Grupo</span>
+              <span class="tag" data-i18n="tag_juego">Juego</span>
+            </div>
+            <div class="project-identity-challenge">
+              <p class="project-identity-challenge-title" data-i18n="desafio_title">Desafío central</p>
+              <p class="project-identity-challenge-desc"  data-i18n="desafio_desc">Transmitir el juego como herramienta terapéutica sin caer en algo infantil. La identidad debía generar confianza en padres y profesionales, y al mismo tiempo conectar con el espíritu del espacio.</p>
+            </div>
+          </div>
+          <img class="img-fluid" src="../assets/img/domus/styletile.svg" alt="Style Tile con identidad visual de Domus">
+        </div>
+      </section>
+
+      <!-- 04. PROCESO -->
+      <section class="project-section" id="proceso">
+        <div class="project-proceso-inner">
+          <div class="project-section-header">
+            <span class="project-section-num">04.</span>
+            <h2 class="project-section-title" data-i18n="nav_proceso">Proceso</h2>
+            <p class="project-proceso-subtitle" data-i18n="proceso_sub">Decisiones de diseño</p>
+          </div>
+
+          <div class="proceso-row">
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+              <p class="proceso-card-text"  data-i18n="pr1_antes">Home centrada en la trayectoria y formación de la creadora</p>
+            </div>
+            <div class="proceso-arrow" aria-hidden="true">
+              <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-arrow-down" aria-hidden="true">
+              <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+              <p class="proceso-card-text"  data-i18n="pr1_despues">Home que explica qué es Domus y su propósito desde el primer scroll</p>
+            </div>
+          </div>
+          <hr>
+
+          <div class="proceso-row">
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+              <p class="proceso-card-text"  data-i18n="pr2_antes">Tratamientos poco visibles al estar ubicados dentro de secciones anidadas</p>
+            </div>
+            <div class="proceso-arrow" aria-hidden="true">
+              <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-arrow-down" aria-hidden="true">
+              <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+              <p class="proceso-card-text"  data-i18n="pr2_despues">Cada tratamiento con sección propia, detalle claro y expandible en mobile</p>
+            </div>
+          </div>
+          <hr>
+
+          <div class="proceso-row">
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+              <p class="proceso-card-text"  data-i18n="pr3_antes">Capacitaciones y colaboraciones sin visibilidad ni sección</p>
+            </div>
+            <div class="proceso-arrow" aria-hidden="true">
+              <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-arrow-down" aria-hidden="true">
+              <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+              <p class="proceso-card-text"  data-i18n="pr3_despues">Secciones separadas con identidad propia para los nuevos servicios</p>
+            </div>
+          </div>
+          <hr>
+
+          <div class="proceso-row">
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+              <p class="proceso-card-text"  data-i18n="pr4_antes">Formulario de contacto genérico sin contexto</p>
+            </div>
+            <div class="proceso-arrow" aria-hidden="true">
+              <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-arrow-down" aria-hidden="true">
+              <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="proceso-card">
+              <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+              <p class="proceso-card-text"  data-i18n="pr4_despues">Formulario con selector de tratamiento + campo "Derivado por" para filtrar consultas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. RESULTADOS -->
+      <section class="project-resultados" id="resultados">
+        <div class="project-resultados-inner">
+          <div class="project-section-header" style="margin-top: 0; margin-bottom: 0;">
+            <span class="project-section-num">05.</span>
+            <h2 class="project-section-title" data-i18n="nav_resultados">Resultados</h2>
+          </div>
+
+          <div class="resultados-carousel-wrap">
+            <div class="resultados-carousel-viewport" id="resViewport">
+              <div class="resultados-carousel-track" id="resTrack">
+                <div class="resultados-slide">
+                  <img class="img-fluid" src="../assets/img/domus/carrusel1.svg" alt="Mockup de la web">
+                  <p class="resultados-slide-caption" data-i18n="slide1_cap">Contexto sobre el espacio terapéutico</p>
+                </div>
+                <div class="resultados-slide">
+                  <img class="img-fluid" src="../assets/img/domus/carrusel2.svg" alt="Mockup de la web">
+                  <p class="resultados-slide-caption" data-i18n="slide2_cap">Cada tipo de tratamiento seccionado</p>
+                </div>
+                <div class="resultados-slide">
+                  <img class="img-fluid" src="../assets/img/domus/carrusel3.svg" alt="Mockup de la web">
+                  <p class="resultados-slide-caption" data-i18n="slide3_cap">Sección propia para colaboraciones y capacitaciones</p>
+                </div>
+                <div class="resultados-slide">
+                  <img class="img-fluid" src="../assets/img/domus/carrusel4.svg" alt="Mockup de la web">
+                  <p class="resultados-slide-caption" data-i18n="slide4_cap">Formulario personalizado</p>
+                </div>
+              </div>
+            </div>
+            <div class="resultados-dots" id="resDots"></div>
+          </div>
+
+          <div class="resultados-bottom">
+            <div class="resultados-bottom-left">
+              <p class="resultados-bottom-text" data-i18n="responsive_text">100% Responsive, de fácil acceso en cualquier dispositivo</p>
+              <a href="https://jazminramirezlandazabal.com/" target="_blank" class="btn">
+                <span data-i18n="btn_web">Acceder a web</span> <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+            <div class="resultados-videos">
+              <div class="resultados-video-desktop">
+                <video autoplay loop muted playsinline>
+                  <source src="../assets/video/homeDomus.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="resultados-video-mobile">
+                <video autoplay loop muted playsinline>
+                  <source src="../assets/video/homeDomus_mobile.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 06. RETOS Y LOGROS -->
+    <section class="project-retos" id="retos">
+      <div class="project-section-header" style="margin-top: 0; margin-bottom: 36px;">
+        <span class="project-section-num">06.</span>
+        <h2 class="project-section-title" data-i18n="nav_retos">Mayores retos y Logros</h2>
+      </div>
+
+      <div class="retos-group">
+        <p class="retos-group-label" data-i18n="retos_label">Retos</p>
+        <div class="retos-cards">
+          <div class="retos-card reto" data-i18n="reto1">Diseñar para tres perfiles de usuario en simultáneo sin fragmentar el mensaje</div>
+          <div class="retos-card reto" data-i18n="reto2">Sencillez sin perder el profesionalismo que genera confianza</div>
+          <div class="retos-card reto" data-i18n="reto3">Integrar material multimedia existente a la nueva identidad visual</div>
+        </div>
+      </div>
+
+      <div class="retos-group" style="margin-bottom: 0;">
+        <p class="retos-group-label" data-i18n="logros_label">Logros</p>
+        <div class="retos-cards">
+          <div class="retos-card logro" data-i18n="logro1">Jerarquía clara que permite encontrar lo necesario en pocos clics</div>
+          <div class="retos-card logro" data-i18n="logro2">Sistema de diseño consistente y diferenciador desde el primer vistazo</div>
+          <div class="retos-card logro" data-i18n="logro3">Toda la información de Domus reunida en un solo lugar con identidad propia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE PROYECTOS -->
+    <div class="project-nav-between">
+      <div class="project-nav-between-inner">
+        <a href="../pages/recreo.html" class="project-nav-prev">
+          <span class="nav-between-dir">
+            <span class="nav-between-arrow">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 2 4 7 9 12"/></svg>
+            </span>
+            <span data-i18n="nav_prev">Proyecto anterior</span>
+          </span>
+          <span class="nav-between-title">Re-Creo</span>
+          <span class="nav-between-subtitle" data-i18n="nav_prev_sub">Branding · Redes Sociales</span>
+        </a>
+        <div class="project-nav-divider"></div>
+        <a href="../pages/jetsmart.html" class="project-nav-next">
+          <span class="nav-between-dir">
+            <span class="nav-between-arrow">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 2 10 7 5 12"/></svg>
+            </span>
+            <span data-i18n="nav_next">Proyecto siguiente</span>
+          </span>
+          <span class="nav-between-title">JetSMART</span>
+          <span class="nav-between-subtitle" data-i18n="nav_next_sub">UX/UI · Diseño web · Conceptual</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BOTTOM SHEET MOBILE -->
+  <button class="project-nav-mobile-btn" id="sheetBtn" aria-label="Ver secciones">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+    <span id="sheetBtnLabel" data-i18n="nav_contexto">Contexto</span>
+  </button>
+
+  <div class="project-nav-mobile-overlay" id="sheetOverlay"></div>
+
+  <div class="project-nav-bottom-sheet" id="bottomSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <a href="#contexto"         class="sheet-nav-link active" data-label="Contexto"         data-i18n="nav_contexto">Contexto <span class="sheet-dot"></span></a>
+    <a href="#problema"         class="sheet-nav-link"        data-label="Problema"         data-i18n="nav_problema">Problema <span class="sheet-dot"></span></a>
+    <a href="#identidad-visual" class="sheet-nav-link"        data-label="Identidad Visual" data-i18n="nav_identidad">Identidad Visual <span class="sheet-dot"></span></a>
+    <a href="#proceso"          class="sheet-nav-link"        data-label="Proceso"          data-i18n="nav_proceso">Proceso <span class="sheet-dot"></span></a>
+    <a href="#resultados"       class="sheet-nav-link"        data-label="Resultados"       data-i18n="nav_resultados">Resultados <span class="sheet-dot"></span></a>
+    <a href="#retos"            class="sheet-nav-link"        data-label="Retos y Logros"   data-i18n="nav_retos">Retos y Logros <span class="sheet-dot"></span></a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+  <div class="footer-top">
+    <a href="../index.html" class="footer-logo">
+      <img class="img-fluid" src="../favicon.ico" alt="Mariana Mercado Villabona" />
+    </a>
+
+    <div class="footer-nav">
+      <a href=""><p>Proyectos</p></a>
+      <a href=""><p>Sobre mí</p></a>
+      <a href=""><p>Contacto</p></a>
+    </div>
+    
+
+    <div class="footer-social">
+      <a href="https://wa.me/5491168735084" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img class="img-fluid" src="../assets/img/whatsapp.svg" alt="ícono Whatsapp" />
+      </a>
+      <a href="mailto:marivillabona2@gmail.com" aria-label="Correo">
+        <img class="img-fluid" src="../assets/img/mail.svg" alt="ícono mail" />
+      </a>
+      <a href="https://linkedin.com/in/marianamercadovillabona" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img class="img-fluid" src="../assets/img/linkedin.svg" alt="ícono linkedin" />
+      </a>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+    <p>© 2026 Todos los derechos reservados</p>
+    <p>Mariana Mercado Villabona</p>
+  </div>
+</footer>
+        
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+
+  <script>
+    const translations = {
+      es: {
+        nav_proyectos:"Proyectos", nav_sobre:"Sobre mí", nav_contacto:"Contacto",
+        nav_contexto:"Contexto", nav_problema:"Problema", nav_identidad:"Identidad Visual",
+        nav_proceso:"Proceso", nav_resultados:"Resultados", nav_retos:"Retos y Logros",
+        hero_title:"Domus –<br>Rediseño web",
+        tag_frontend:"Desarrollo Front-end", tag_real:"Proyecto real",
+        btn_web:"Acceder a web",
+        c1_label:"¿Qué es Domus?", c1_title:"Espacio de psicología especializado en neurodivergencia",
+        c1_desc:"Acompañamiento a niños y adolescentes dentro del espectro autista. Método principal: Terapia Basada en Lego, un enfoque poco común que combina el juego con el desarrollo de habilidades sociales.",
+        c2_label:"¿Qué necesitaban?", c2_title:"Rediseñar el sitio web desde cero",
+        c2_desc:"El objetivo era crear una presencia digital que comunicara la esencia del espacio: profesional y cercano a la vez. Un sitio que hablara a familias, profesionales de la salud e instituciones educativas en simultáneo.",
+        p1_title:"Servicios invisibles", p1_desc:"Secciones anidadas que impedían entender la amplitud de la propuesta más allá de la Terapia con LEGO.",
+        p2_title:"CV en lugar de espacio", p2_desc:"El contenido hablaba de la trayectoria de la creadora, no del espacio ni de lo que hace por sus pacientes.",
+        p3_title:"Sin identidad propia", p3_desc:"Sitio construido sobre una plantilla genérica sin ninguna adaptación visual que reflejara la personalidad de Domus.",
+        p4_title:"Sin valor diferencial", p4_desc:"No quedaba claro por qué elegir Domus frente a otras terapias similares en Buenos Aires.",
+        p5_title:"Formulario genérico", p5_desc:"El contacto no diferenciaba el tipo de consulta, generando trabajo innecesario para la profesional.",
+        pregunta_label:"Pregunta guía del proyecto",
+        pregunta_text:"¿Cómo mostrar Domus como el espacio terapéutico profesional y cercano que realmente es?",
+        identidad_intro:"Palabras clave que guiaron el diseño:",
+        tag_lego:"Terapia Basada en Lego", tag_encuentro:"Encuentro", tag_grupo:"Grupo", tag_juego:"Juego",
+        desafio_title:"Desafío central",
+        desafio_desc:"Transmitir el juego como herramienta terapéutica sin caer en algo infantil. La identidad debía generar confianza en padres y profesionales, y al mismo tiempo conectar con el espíritu del espacio.",
+        proceso_sub:"Decisiones de diseño",
+        label_antes:"Antes", label_despues:"Después",
+        pr1_antes:"Home centrada en la trayectoria y formación de la creadora",
+        pr1_despues:"Home que explica qué es Domus y su propósito desde el primer scroll",
+        pr2_antes:"Tratamientos poco visibles al estar ubicados dentro de secciones anidadas",
+        pr2_despues:"Cada tratamiento con sección propia, detalle claro y expandible en mobile",
+        pr3_antes:"Capacitaciones y colaboraciones sin visibilidad ni sección",
+        pr3_despues:"Secciones separadas con identidad propia para los nuevos servicios",
+        pr4_antes:"Formulario de contacto genérico sin contexto",
+        pr4_despues:'Formulario con selector de tratamiento + campo "Derivado por" para filtrar consultas',
+        slide1_cap:"Contexto sobre el espacio terapéutico",
+        slide2_cap:"Cada tipo de tratamiento seccionado",
+        slide3_cap:"Sección propia para colaboraciones y capacitaciones",
+        slide4_cap:"Formulario personalizado",
+        responsive_text:"100% Responsive, de fácil acceso en cualquier dispositivo",
+        retos_label:"Retos", logros_label:"Logros",
+        reto1:"Diseñar para tres perfiles de usuario en simultáneo sin fragmentar el mensaje",
+        reto2:"Sencillez sin perder el profesionalismo que genera confianza",
+        reto3:"Integrar material multimedia existente a la nueva identidad visual",
+        logro1:"Jerarquía clara que permite encontrar lo necesario en pocos clics",
+        logro2:"Sistema de diseño consistente y diferenciador desde el primer vistazo",
+        logro3:"Toda la información de Domus reunida en un solo lugar con identidad propia",
+        nav_prev:"Proyecto anterior", nav_prev_sub:"Branding · Redes Sociales",
+        nav_next:"Proyecto siguiente", nav_next_sub:"UX/UI · Diseño web · Conceptual",
+        footer_copy:"© 2026 Todos los derechos reservados",
+      },
+      en: {
+        nav_proyectos:"Projects", nav_sobre:"About me", nav_contacto:"Contact",
+        nav_contexto:"Context", nav_problema:"Problem", nav_identidad:"Visual Identity",
+        nav_proceso:"Process", nav_resultados:"Results", nav_retos:"Challenges & Achievements",
+        hero_title:"Domus –<br>Web redesign",
+        tag_frontend:"Front-end development", tag_real:"Real project",
+        btn_web:"Visit website",
+        c1_label:"What is Domus?", c1_title:"Psychology practice specialised in neurodivergence",
+        c1_desc:"Support for children and adolescents on the autism spectrum. Main method: LEGO-Based Therapy — an uncommon approach that combines play with the development of social skills.",
+        c2_label:"What did they need?", c2_title:"Redesign the website from scratch",
+        c2_desc:"The goal was to create a digital presence that communicated the essence of the space: professional and warm at the same time. A site that spoke to families, healthcare professionals and educational institutions simultaneously.",
+        p1_title:"Invisible services", p1_desc:"Nested sections that made it impossible to understand the full scope of the offering beyond LEGO Therapy.",
+        p2_title:"CV instead of space", p2_desc:"The content was about the founder's background, not about the space or what it does for its patients.",
+        p3_title:"No visual identity", p3_desc:"Site built on a generic template with no visual adaptation that reflected the personality of Domus.",
+        p4_title:"No differentiating value", p4_desc:"It wasn't clear why someone should choose Domus over other similar practices in Buenos Aires.",
+        p5_title:"Generic contact form", p5_desc:"The contact form didn't distinguish between types of enquiry, creating unnecessary work for the practitioner.",
+        pregunta_label:"Guiding question for the project",
+        pregunta_text:"How do we show Domus as the professional and warm therapeutic space it truly is?",
+        identidad_intro:"Keywords that guided the design:",
+        tag_lego:"LEGO-Based Therapy", tag_encuentro:"Connection", tag_grupo:"Group", tag_juego:"Play",
+        desafio_title:"Core challenge",
+        desafio_desc:"Conveying play as a therapeutic tool without coming across as childish. The identity had to build trust with parents and professionals while connecting with the spirit of the space.",
+        proceso_sub:"Design decisions",
+        label_antes:"Before", label_despues:"After",
+        pr1_antes:"Home focused on the founder's career and academic background",
+        pr1_despues:"Home that explains what Domus is and its purpose from the first scroll",
+        pr2_antes:"Treatments barely visible, buried inside nested sections",
+        pr2_despues:"Each treatment with its own section, clear detail and expandable on mobile",
+        pr3_antes:"Training and collaborations with no visibility or dedicated section",
+        pr3_despues:"Separate sections with their own identity for the new services",
+        pr4_antes:"Generic contact form with no context",
+        pr4_despues:'Form with treatment selector + "Referred by" field to filter enquiries',
+        slide1_cap:"Context about the therapeutic space",
+        slide2_cap:"Each treatment type in its own section",
+        slide3_cap:"Dedicated section for collaborations and training",
+        slide4_cap:"Customised contact form",
+        responsive_text:"100% Responsive — accessible on any device",
+        retos_label:"Challenges", logros_label:"Achievements",
+        reto1:"Designing for three user profiles simultaneously without fragmenting the message",
+        reto2:"Simplicity without losing the professionalism that builds trust",
+        reto3:"Integrating existing multimedia material into the new visual identity",
+        logro1:"Clear hierarchy that lets users find what they need in a few clicks",
+        logro2:"Consistent, distinctive design system recognisable from first glance",
+        logro3:"All Domus information in one place with its own visual identity",
+        nav_prev:"Previous project", nav_prev_sub:"Branding · Social Media",
+        nav_next:"Next project", nav_next_sub:"UX/UI · Web design · Conceptual",
+        footer_copy:"© 2026 All rights reserved",
+      },
+      pt: {
+        nav_proyectos:"Projetos", nav_sobre:"Sobre mim", nav_contacto:"Contato",
+        nav_contexto:"Contexto", nav_problema:"Problema", nav_identidad:"Identidade Visual",
+        nav_proceso:"Processo", nav_resultados:"Resultados", nav_retos:"Desafios e Conquistas",
+        hero_title:"Domus –<br>Redesign web",
+        tag_frontend:"Desenvolvimento Front-end", tag_real:"Projeto real",
+        btn_web:"Acessar site",
+        c1_label:"O que é Domus?", c1_title:"Espaço de psicologia especializado em neurodivergência",
+        c1_desc:"Acompanhamento a crianças e adolescentes dentro do espectro autista. Método principal: Terapia Baseada em LEGO, uma abordagem pouco comum que combina o jogo com o desenvolvimento de habilidades sociais.",
+        c2_label:"O que precisavam?", c2_title:"Redesenhar o site do zero",
+        c2_desc:"O objetivo era criar uma presença digital que comunicasse a essência do espaço: profissional e acolhedor ao mesmo tempo. Um site que falasse com famílias, profissionais de saúde e instituições educacionais simultaneamente.",
+        p1_title:"Serviços invisíveis", p1_desc:"Seções aninhadas que impediam entender a amplitude da proposta além da Terapia com LEGO.",
+        p2_title:"Currículo em vez de espaço", p2_desc:"O conteúdo falava sobre a trajetória da criadora, não sobre o espaço nem sobre o que ele faz pelos seus pacientes.",
+        p3_title:"Sem identidade própria", p3_desc:"Site construído sobre um template genérico sem nenhuma adaptação visual que refletisse a personalidade do Domus.",
+        p4_title:"Sem valor diferencial", p4_desc:"Não ficava claro por que escolher o Domus em vez de outras terapias similares em Buenos Aires.",
+        p5_title:"Formulário genérico", p5_desc:"O contato não diferenciava o tipo de consulta, gerando trabalho desnecessário para a profissional.",
+        pregunta_label:"Pergunta orientadora do projeto",
+        pregunta_text:"Como mostrar o Domus como o espaço terapêutico profissional e acolhedor que realmente é?",
+        identidad_intro:"Palavras-chave que guiaram o design:",
+        tag_lego:"Terapia Baseada em LEGO", tag_encuentro:"Encontro", tag_grupo:"Grupo", tag_juego:"Jogo",
+        desafio_title:"Desafio central",
+        desafio_desc:"Transmitir o jogo como ferramenta terapêutica sem cair no infantilismo. A identidade precisava gerar confiança em pais e profissionais e, ao mesmo tempo, conectar com o espírito do espaço.",
+        proceso_sub:"Decisões de design",
+        label_antes:"Antes", label_despues:"Depois",
+        pr1_antes:"Home centrada na trajetória e formação da criadora",
+        pr1_despues:"Home que explica o que é o Domus e seu propósito desde o primeiro scroll",
+        pr2_antes:"Tratamentos pouco visíveis por estarem dentro de seções aninhadas",
+        pr2_despues:"Cada tratamento com seção própria, detalhe claro e expansível no mobile",
+        pr3_antes:"Capacitações e colaborações sem visibilidade nem seção própria",
+        pr3_despues:"Seções separadas com identidade própria para os novos serviços",
+        pr4_antes:"Formulário de contato genérico sem contexto",
+        pr4_despues:'Formulário com seletor de tratamento + campo "Encaminhado por" para filtrar consultas',
+        slide1_cap:"Contexto sobre o espaço terapêutico",
+        slide2_cap:"Cada tipo de tratamento em seção própria",
+        slide3_cap:"Seção própria para colaborações e capacitações",
+        slide4_cap:"Formulário personalizado",
+        responsive_text:"100% Responsivo — de fácil acesso em qualquer dispositivo",
+        retos_label:"Desafios", logros_label:"Conquistas",
+        reto1:"Projetar para três perfis de usuário simultaneamente sem fragmentar a mensagem",
+        reto2:"Simplicidade sem perder o profissionalismo que gera confiança",
+        reto3:"Integrar material multimídia existente à nova identidade visual",
+        logro1:"Hierarquia clara que permite encontrar o necessário em poucos cliques",
+        logro2:"Sistema de design consistente e diferenciador desde o primeiro olhar",
+        logro3:"Toda a informação do Domus reunida em um só lugar com identidade própria",
+        nav_prev:"Projeto anterior", nav_prev_sub:"Branding · Redes Sociais",
+        nav_next:"Próximo projeto", nav_next_sub:"UX/UI · Web design · Conceitual",
+        footer_copy:"© 2026 Todos os direitos reservados",
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function applyLang(lang) {
+      const t = translations[lang];
+      if (!t) return;
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+      document.getElementById('currentLang').textContent = lang.toUpperCase();
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.querySelectorAll('[data-i18n-img]').forEach(el => {
+        const key = el.dataset.i18nImg;
+        if (t[key]) el.src = t[key];
+      });
+      document.querySelectorAll('.sheet-nav-link[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.dataset.label = t[key];
+      });
+      document.querySelectorAll('[data-lang]').forEach(a => {
+        a.classList.toggle('active', a.dataset.lang === lang);
+      });
+    }
+
+    applyLang(currentLang);
+
+    document.querySelectorAll('[data-lang]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        applyLang(a.dataset.lang);
+        document.getElementById('langDropdown').classList.remove('open');
+        document.getElementById('langBtn').classList.remove('open');
+        document.getElementById('langBtn').setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+  <script>
+    const langBtn = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+    langBtn.addEventListener('click', e => { e.stopPropagation(); const open = langDropdown.classList.toggle('open'); langBtn.classList.toggle('open', open); langBtn.setAttribute('aria-expanded', open); });
+    langBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); langBtn.click(); } });
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    function toggleMenu(force) { const open = typeof force === 'boolean' ? force : !mobileMenu.classList.contains('open'); mobileMenu.classList.toggle('open', open); burgerBtn.classList.toggle('open', open); burgerBtn.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; }
+    burgerBtn.addEventListener('click', e => { e.stopPropagation(); toggleMenu(); });
+    mobileOverlay.addEventListener('click', () => toggleMenu(false));
+    document.addEventListener('click', e => { if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) { langDropdown.classList.remove('open'); langBtn.classList.remove('open'); langBtn.setAttribute('aria-expanded', false); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { toggleMenu(false); langDropdown.classList.remove('open'); langBtn.classList.remove('open'); toggleSheet(false); } });
+
+    const sheetBtn = document.getElementById('sheetBtn');
+    const sheetBtnLabel = document.getElementById('sheetBtnLabel');
+    const bottomSheet = document.getElementById('bottomSheet');
+    const sheetOverlay = document.getElementById('sheetOverlay');
+    const sheetLinks = document.querySelectorAll('.sheet-nav-link');
+    function toggleSheet(force) { const open = typeof force === 'boolean' ? force : !bottomSheet.classList.contains('open'); bottomSheet.classList.toggle('open', open); sheetOverlay.classList.toggle('open', open); bottomSheet.setAttribute('aria-hidden', !open); document.body.style.overflow = open ? 'hidden' : ''; }
+    sheetBtn.addEventListener('click', () => toggleSheet());
+    sheetOverlay.addEventListener('click', () => toggleSheet(false));
+    sheetLinks.forEach(link => { link.addEventListener('click', () => setTimeout(() => toggleSheet(false), 120)); });
+
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.project-nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = `#${entry.target.id}`;
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        sheetLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        const activeSheet = document.querySelector(`.sheet-nav-link[href="${id}"]`);
+        if (activeSheet) sheetBtnLabel.textContent = activeSheet.dataset.label;
+      });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    (function () {
+      const viewport = document.getElementById('resViewport');
+      const track = document.getElementById('resTrack');
+      const dotsWrap = document.getElementById('resDots');
+      if (!viewport || !track) return;
+      const slides = Array.from(track.querySelectorAll('.resultados-slide'));
+      const GAP = 24;
+      let current = 0, isDragging = false, startX = 0, dragX = 0;
+      function slidesVisible() { return window.innerWidth <= 640 ? 1 : 2; }
+      function slideWidth() { return (viewport.offsetWidth - GAP * (slidesVisible() - 1)) / slidesVisible(); }
+      function setSizes() { const w = slideWidth(); slides.forEach(s => { s.style.width = w + 'px'; }); }
+      function maxIndex() { return Math.max(0, slides.length - slidesVisible()); }
+      function buildDots() { dotsWrap.innerHTML = ''; for (let i = 0; i <= maxIndex(); i++) { const d = document.createElement('button'); d.className = 'dot' + (i === 0 ? ' active' : ''); d.setAttribute('aria-label', `Slide ${i + 1}`); d.addEventListener('click', () => goTo(i)); dotsWrap.appendChild(d); } }
+      function updateDots() { dotsWrap.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current)); }
+      function goTo(index) { current = Math.max(0, Math.min(index, maxIndex())); track.style.transform = `translateX(-${current * (slideWidth() + GAP)}px)`; updateDots(); }
+      viewport.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; dragX = 0; track.style.transition = 'none'; viewport.classList.add('grabbing'); });
+      window.addEventListener('mousemove', e => { if (!isDragging) return; dragX = e.clientX - startX; track.style.transform = `translateX(${-(current * (slideWidth() + GAP)) + dragX}px)`; });
+      window.addEventListener('mouseup', () => { if (!isDragging) return; isDragging = false; viewport.classList.remove('grabbing'); track.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; const t = slideWidth() * 0.25; if (dragX < -t) goTo(current + 1); else if (dragX > t) goTo(current - 1); else goTo(current); });
+      let touchStart = 0, touchDelta = 0;
+      viewport.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; touchDelta = 0; track.style.transition = 'none'; }, { passive: true });
+      viewport.addEventListener('touchmove', e => { touchDelta = e.touches[0].clientX - touchStart; track.style.transform = `translateX(${-(current * (slideWidth() + GAP)) + touchDelta}px)`; }, { passive: true });
+      viewport.addEventListener('touchend', () => { track.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; const t = slideWidth() * 0.25; if (touchDelta < -t) goTo(current + 1); else if (touchDelta > t) goTo(current - 1); else goTo(current); });
+      window.addEventListener('resize', () => { setSizes(); buildDots(); goTo(Math.min(current, maxIndex())); });
+      setSizes(); buildDots(); goTo(0);
+    })();
+  </script>
+
+  </body>
+</html>

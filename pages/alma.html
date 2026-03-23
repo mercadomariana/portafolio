@@ -1,238 +1,675 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" style="overflow-x: hidden;">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Proyecto basado en el diseño de una aplicación móvil enfocada en la salud mental. Tomando en cuenta una previa investigación de posibles usuarios se diseñó la navegación y diversas funciones para que el publico esté interesado y sobretodo le impacte en su vida cotidiana el uso de esta aplicación">
-    <meta name="keywords" content="PROYECTOS, PORTAFOLIO, TRABAJO, FREELANCE, APLICACION, DISEÑO, UX, UI, INVESTIGACION, SALUD MENTAL, FIGMA">
-    <title>Alma | Mariana Mercado</title>
+    <meta name="description" content="Portafolio de Mariana Mercado, enfocada en el diseño ux/ui y en el desarrollo web front-end">
+    <meta name="keywords" content="PROYECTOS, PORTAFOLIO, TRABAJO, FREELANCE, CONTACTAME, CONOCEME, MARIANA MERCADO, ESTUDIANTE, DISEÑO UX/UI, DESARROLLO WEB, FRONT-END, TRABAJADORA, DISEÑADORA, DESARROLLADOR, DESARROLLADORA">
+    <title>Portafolio | Mariana Mercado</title>
     <link rel="icon" href="../favicon.ico" type="image/png">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/hover-min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
+
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <div class="lightbox-img-wrap" id="lightboxWrap">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+    <p class="lightbox-hint" data-i18n="lightbox_hint">Click para hacer zoom · ESC para cerrar</p>
+  </div>
+
   <body>
-    <header id="headerProyectos">
-        <nav class="">
-          <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.svg" alt="Logo MMVI"></a>
-          <div class="menuHeader">
-            <div class="dropdown">
-          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ES <img src="../assets/img/flechaDropdown.svg" alt="Flecha hacia abajo" class="icono-dropdown">
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">English</a></li>
-          </ul>
-        </div>
-        <div  class="cerrar"><a href="../index.html"><img src="../assets/img/cerrar.svg" alt=""></a></div>
+
+  <div class="headerProyectos">
+    <header>
+      <div class="header-left">
+        <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="logo" aria-label="MVI Home">
+          <img src="../favicon.ico" alt="logo">
+        </a>
+      </div>
+      <nav>
+        <a href="../index.html#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+        <a href="../index.html#sobre-mi"  data-i18n="nav_sobre">Sobre mí</a>
+        <a href="../index.html#contacto"  data-i18n="nav_contacto">Contacto</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang-container">
+          <div class="lang" id="langBtn" role="button" aria-expanded="false" tabindex="0">
+            <span id="currentLang">ES</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#2a1f2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-      </nav></header>
-
-      <main>
-        <section class="principio separadortop">
-          <div class="textoYmockup">
-              <div class="texto margenesLados">
-              <h1 class=""><strong>Alma</strong></h1>
-            <p style="color: #3A2C39;">Aplicación móvil para jóvenes que buscan acompañamiento psicológico y bienestar mental.</p>
-            <ul>
-              <li>🎨 Rol: Diseño de producto (UX/UI)</li>
-              <li>🛠 Herramientas: Figma, Adobe Illustrator, Adobe Photoshop.</li>
-            </ul>
-            <p class="aclaracion">*Nota: Esto en un proyecto conceptual y grupal.</p>
-            </div>
-            <div class="mockups">
-              <img class="mockup1Alma" src="../assets/img/alma/mockup1.svg" alt="">
-              <img class="mockup2Alma" src="../assets/img/alma/mockup2.svg" alt="">
-            </div>
-          </div>          
-        </section>
-
-        <section class="desafio margenesLados separadortop">
-          <h2 class="h2claro">Desafío</h2>
-          <p class="separadorSecciones">Diseñar una aplicación móvil intuitiva que permita a los jóvenes <strong>acceder a profesionales de la salud mental</strong> y ofrecer funcionalidades adicionales para <strong>gestionar el estrés y la ansiedad</strong> por falta de información o tiempo.</p>
-        </section>
-
-        <section class="procesoDiseno margenesLados separadortop">
-          <h2 class="h2claro">Proceso de diseño</h2>
-          
-          <!-- ACORDEON ----------------------  -->
-          <div class="accordion accordion-flush separadorSecciones" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Investigación
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul class="d-flex flex-column">
-              <p>En esta etapa, se investigó a fondo para <strong>entender las necesidades y problemas de los usuarios.</strong> Para esto, se realizaron entrevistas a 8 personas que ayudaron a crear un mapa de empatía, el cual mostró que muchos jóvenes sienten ansiedad, soledad, y la presión de lo que otros piensan. También se diseñó un "user persona", un perfil típico de usuario, como un estudiante que siente mucha presión por mantener su beca y le cuesta encontrar ayuda profesional accesible. <strong>Gracias a esta investigación, se descubrieron oportunidades para la app, como chats de confianza o seguimiento de hábitos</strong></p>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" data-lang="es">ES</a>
+            <a href="#" data-lang="en">EN</a>
+            <a href="#" data-lang="pt">PT</a>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Definición
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <p>Aquí, se usó un "árbol del problema" para definir con precisión el reto principal: <strong>los jóvenes no saben cómo manejar su salud mental, sobre todo el estrés y la ansiedad, por falta de información, tiempo y dificultades diarias.</strong> Se identificaron los efectos de este problema (como frustración emocional o bajo rendimiento) y sus causas (incluyendo limitaciones económicas, el estigma de la salud mental o la falta de enseñanza para expresar emociones). Además, se aplicó la técnica de los "5 whys" para entender las razones más profundas y asegurar que la aplicación fuera realmente adecuada para los jóvenes</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Ideación
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <p>En esta etapa, <strong>se definieron las funcionalidades y la estructura de la aplicación.</strong> Se crearon un "user flow" y un "mapa mental" para organizar lo que haría la app y dónde estaría cada función. Para empezar a visualizar la interfaz, se realizó un "crazy 8" grupal, donde se eligieron las pantallas más adecuadas para cada función, como el inicio de sesión, la pantalla principal, meditaciones o el chat con profesionales. <strong>Los resultados de probar el primer prototipo también generaron nuevas ideas</strong>, como la de añadir una sección para explicar un concepto llamado "Tulipán" o resaltar el acceso al registro de emociones</p>
-          </div>
-        </div>
+    </header>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-panel">
+      <a href="../index.html#proyectos"><span class="dot"></span><span data-i18n="nav_proyectos">Proyectos</span></a>
+      <a href="../index.html#sobre-mi"><span class="dot"></span><span data-i18n="nav_sobre">Sobre mí</span></a>
+      <a href="../index.html#contacto"><span class="dot"></span><span data-i18n="nav_contacto">Contacto</span></a>
+      <div class="mobile-divider"></div>
+    </div>
+  </div>
+
+  <section class="project-hero">
+    <div class="project-hero-left">
+      <span class="project-year">2024</span>
+      <h1 class="project-title">Alma</h1>
+      <p data-i18n="hero_sub">App móvil de bienestar mental · Jóvenes 15–30 años · Curso UX/UI</p>
+      <div class="card-tags">
+        <span class="tag tagsRosados">UX Research</span>
+        <span class="tag tagsRosados">UI Design</span>
+        <span class="tag tagsRosados" data-i18n="tag_app">App móvil</span>
+        <span class="tag tagsRosados" data-i18n="tag_conceptual">Conceptual</span>
+        <span class="tag tagsRosados">Figma</span>
       </div>
     </div>
-        </section>
+    <div class="project-hero-right">
+      <img class="img-fluid" style="max-width: 80%;" src="../assets/img/alma/portada.png" alt="Mockup app móvil"/>
+    </div>
+  </section>
 
-        <section class="separadortop">
-          <h2 class="h2claro margenesLados">Mockups</h2>
+  <div class="project-nav-wrap">
+    <nav class="project-nav">
+      <a href="#contexto"      class="project-nav-link active" data-i18n="nav_contexto">Contexto</a>
+      <a href="#investigacion" class="project-nav-link"        data-i18n="nav_investigacion">Investigación</a>
+      <a href="#definicion"    class="project-nav-link"        data-i18n="nav_definicion">Definición</a>
+      <a href="#idea"          class="project-nav-link"        data-i18n="nav_idea">Idea + Prototipo</a>
+      <a href="#testeo"        class="project-nav-link"        data-i18n="nav_testeo">Testeo</a>
+      <a href="#final"         class="project-nav-link"        data-i18n="nav_final">Prototipo final y aprendizaje</a>
+    </nav>
+  </div>
 
-          <!--CARRUSEL IMAGENES-->
-        <div class="swiper swiperInicio separadorSecciones">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup1.svg" alt="Mockup home"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup1-2.svg" alt="Mockup home scroll"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup2.svg" alt="Mockup seccion meditaciones"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup3.svg" alt="Mockup perfil"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup4.svg" alt="Mockup calendario emocional"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup4-1.svg" alt="Mockup registro emocional"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup4-2.svg" alt="Mockup registro cantidad de sueño"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup4-3.svg" alt="Mockup registro algo que quieras contar"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup5.svg" alt="Mockup chat con profesionales"></div>
-            <div class="swiper-slide"><img src="../assets/img/alma/mockup6.svg" alt="Mockup llamada de emergencia"></div>
+  <main>
+
+    <section class="project-section" id="contexto">
+      <div class="project-section-header">
+        <span class="project-section-num">01.</span>
+        <h2 class="project-section-title" data-i18n="nav_contexto">Contexto</h2>
+      </div>
+      <div class="project-cards">
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="c1_label">¿Qué es Alma?</p>
+          <p class="project-card-title" data-i18n="c1_title">App de bienestar mental para jóvenes</p>
+          <p class="project-card-desc"  data-i18n="c1_desc">Reúne en un solo lugar tres herramientas que generalmente están separadas: meditaciones guiadas, registro emocional diario y acceso a profesionales. Modelo freemium para reducir las barreras económicas que alejan a los jóvenes de la ayuda que necesitan.</p>
+        </div>
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="c2_label">Problema Raíz</p>
+          <p class="project-card-title" data-i18n="c2_title">Nada cubre todo en un lugar accesible</p>
+          <p class="project-card-desc"  data-i18n="c2_desc">Las apps disponibles defraudan: ofrecen solo meditaciones, tienen interfaces sobrecargadas o requieren suscripciones costosas. No existe en el mercado latinoamericano una solución integral, simple y económica de salud mental para jóvenes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" id="investigacion">
+      <div class="project-section-header">
+        <span class="project-section-num">02.</span>
+        <h2 class="project-section-title" data-i18n="nav_investigacion">Investigación</h2>
+      </div>
+      <div class="project-identity-challenge">
+        <p class="project-identity-challenge-desc fw-bold" data-i18n="inv_quote">"Las apps solo ofrecen meditaciones, pero yo necesito que alguien me escuche." — Usuario entrevistado</p>
+      </div>
+      <div class="project-cards-row">
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="inv1_title">8 entrevistas</p>
+          <p class="project-card-desc"  data-i18n="inv1_desc">Cuestionario en 5 áreas: contexto personal, experiencias previas, funcionalidades deseadas, seguimiento emocional e interacción con profesionales.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="inv2_title">Mapa de empatía</p>
+          <p class="project-card-desc"  data-i18n="inv2_desc">Los usuarios sienten ansiedad, soledad y presión constante. Tienen que fingir estar bien. Sus emociones son minimizadas por su entorno.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="inv3_title">6 clusters de oportunidad</p>
+          <p class="project-card-desc"  data-i18n="inv3_desc">Necesidad de profesionales · Apps insuficientes · Seguimiento emocional · Distracciones · Interfaz simple · Publicación de artículos.</p>
+        </div>
+      </div>
+      <div style="margin-top: 5rem;" class="imagenesAlma">
+        <div class="d-flex flex-column align-items-center gap-3">
+          <h4 class="fs-4 fw-bold" data-i18n="img_empatia">Mapa de empatía</h4>
+          <img class="zoomable img-fluid" style="border-radius: 10px;" data-i18n-img="sobre_img" src="../assets/img/alma/mapaEmpatia.svg" alt="Mapa de empatía">
+        </div>
+        <div class="d-flex flex-column align-items-center gap-3">
+          <h4 class="fs-4 fw-bold" data-i18n="img_persona">User persona</h4>
+          <img class="zoomable img-fluid" style="border-radius: 10px;" data-i18n-img="sobre_img2" src="../assets/img/alma/userPErsona.svg" alt="User persona">
+        </div>
+      </div>
+    </section>
+
+    <div class="project-lila-bg">
+
+      <section class="project-section" id="definicion">
+        <div class="project-section-header">
+          <span class="project-section-num">03.</span>
+          <h2 class="project-section-title" data-i18n="nav_definicion">Definición</h2>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h4 class="fw-bold fs-4" data-i18n="bench_title">Benchmark</h4>
+          <div class="benchmark">
+            <div class="project-identity-challenge">
+              <p class="project-card-title"              data-i18n="bench1_title">Headspace</p>
+              <p class="project-identity-challenge-desc" data-i18n="bench1_desc">Interfaz atractiva pero restringe el contenido tras el período gratuito. Genera frustración en usuarios que no pueden pagar.</p>
+            </div>
+            <div class="project-identity-challenge">
+              <p class="project-card-title"              data-i18n="bench2_title">Yana</p>
+              <p class="project-identity-challenge-desc" data-i18n="bench2_desc">Apoyo emocional con IA, pero conversaciones limitadas sin suscripción. No satisface la necesidad de conexión real.</p>
+            </div>
+            <div class="project-identity-challenge">
+              <p class="project-card-title"              data-i18n="bench3_title">Meditopía</p>
+              <p class="project-identity-challenge-desc" data-i18n="bench3_desc">Incluye meditaciones, artículos y registro emocional pero la interfaz sobrecargada confunde a los usuarios desde el inicio.</p>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h4 class="fw-bold fs-4" data-i18n="mvp_title">MVP Definido - Funcionalidades básicas</h4>
+          <div class="project-cards-row">
+            <div class="project-card-outline" id="mvp"><p class="project-card-desc" data-i18n="mvp1">Chat con profesionales verificados</p></div>
+            <div class="project-card-outline" id="mvp"><p class="project-card-desc" data-i18n="mvp2">Meditaciones guiadas por categoría</p></div>
+            <div class="project-card-outline" id="mvp"><p class="project-card-desc" data-i18n="mvp3">Registro emocional con calendario</p></div>
+            <div class="project-card-outline" id="mvp"><p class="project-card-desc" data-i18n="mvp4">Onboarding personalizado desde el inicio</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-resultados" id="idea">
+        <div class="project-resultados-inner">
+          <div class="project-section-header" style="margin-top: 0; margin-bottom: 0;">
+            <span class="project-section-num">04.</span>
+            <h2 class="project-section-title" data-i18n="nav_idea">Idea + Prototipo</h2>
+          </div>
+
+          <div class="proceso-card">
+            <p class="proceso-card-label fs-6">MAPA MENTAL</p>
+            <div class="prototipo">
+              <img class="img-fluid zoomable" style="border-radius: 10px;" src="../assets/img/alma/mapaMental.svg" alt="">
+              <p class="proceso-card-text" data-i18n="mm_desc">Se diseñó el mapa mental para determinar la organización de secciones y jerarquía de la información dentro de la aplicación.</p>
+            </div>
+          </div>
+
+          <div class="proceso-card">
+            <p class="proceso-card-label fs-6">USER FLOW</p>
+            <div class="prototipo">
+              <img class="img-fluid zoomable" style="border-radius: 10px;" src="../assets/img/alma/userFlow.svg" alt="">
+              <p class="proceso-card-text" data-i18n="uf_desc">El user flow permitió visualizar el posible recorrido de un usuario en la aplicación, lo que permite entender qué secciones tienen prioridad jerárquica y qué no puede estar funcionando.</p>
+            </div>
+          </div>
+
+          <div class="proceso-card">
+            <p class="proceso-card-label fs-6">5 WHYS</p>
+            <div class="prototipo">
+              <img class="img-fluid zoomable" style="border-radius: 10px;" src="../assets/img/alma/5whys.svg" alt="">
+              <p class="proceso-card-text" data-i18n="whys_desc">Realizar los 5 whys permitió comprender el propósito de la app móvil, trabajando como guía para regresar constantemente a los dolores y necesidades para siempre tenerlos en cuenta a la hora del prototipado.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 3rem;">
+            <h4 class="fw-bold fs-4 text-center" data-i18n="proto_title">Prototipo</h4>
+            <div style="margin-top: 2rem;">
+              <div class="resultados-carousel-wrap">
+                <div class="resultados-carousel-viewport" id="resViewport">
+                  <div class="resultados-carousel-track" id="resTrack">
+                    <div class="resultados-slide">
+                      <img style="border-radius: 15px;" class="img-fluid zoomable" data-i18n-img="proto_img" src="../assets/img/alma/prototipo1.svg" alt="Mockup de la app móvil">
+                      <p class="resultados-slide-caption" data-i18n="slide1_cap">Sección de meditaciones</p>
+                    </div>
+                    <div class="resultados-slide">
+                      <img style="border-radius: 15px;" class="img-fluid zoomable" data-i18n-img="proto_img2" src="../assets/img/alma/prototipo2.svg" alt="Mockup de la app móvil">
+                      <p class="resultados-slide-caption" data-i18n="slide2_cap">On-boarding</p>
+                    </div>
+                    <div class="resultados-slide">
+                      <img style="border-radius: 15px;" class="img-fluid zoomable" data-i18n-img="proto_img3" src="../assets/img/alma/prototipo3.svg" alt="Mockup de la app móvil">
+                      <p class="resultados-slide-caption" data-i18n="slide3_cap">Selección de profesional de apoyo</p>
+                    </div>
+                    <div class="resultados-slide">
+                      <img style="border-radius: 15px;" class="img-fluid zoomable" data-i18n-img="proto_img4" src="../assets/img/alma/prototipo4.svg" alt="Mockup de la app móvil">
+                      <p class="resultados-slide-caption" data-i18n="slide4_cap">Historial de registro diario de emociones</p>
+                    </div>
+                    <div class="resultados-slide">
+                      <img style="border-radius: 15px;" class="img-fluid zoomable" data-i18n-img="proto_img5" src="../assets/img/alma/prototipo5.svg" alt="Mockup de la app móvil">
+                      <p class="resultados-slide-caption" data-i18n="slide5_cap">Registro de emociones</p>
+                    </div>
+                    <div class="resultados-slide">
+                      <img style="border-radius: 15px;" class="img-fluid zoomable" data-i18n-img="proto_img6" src="../assets/img/alma/prototipo6.svg" alt="Mockup de la app móvil">
+                      <p class="resultados-slide-caption" data-i18n="slide6_cap">Historial de registro diario de emociones</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="resultados-dots" id="resDots"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: -1rem;" class="project-section" id="testeo">
+        <div class="project-section-header" style="margin-top: 0; margin-bottom: 36px;">
+          <span class="project-section-num">05.</span>
+          <h2 class="project-section-title" data-i18n="nav_testeo">Testeo e iteración</h2>
+          <p data-i18n="testeo_sub">5 usuarios testeados · Perfiles: 15–19 años, 25 años</p>
         </div>
 
-        <ul class="ulcheckmockups separadortop margenesLados">
-          <li><div class="checksMockups">
-            <img src="../assets/img/check.svg" alt="icono check">
-            <p>Cuenta con registro de progreso simbolizado por el crecimiento de un tulipán</p>
-          </div></li>
-          <li><div class="checksMockups">
-            <img src="../assets/img/check.svg" alt="icono check">
-            <p>Permite realizar llamadas al contacto de emergencia en caso de necesitar ayuda</p>
-          </div></li>
-          <li><div class="checksMockups">
-            <img src="../assets/img/check.svg" alt="icono check">
-            <p>Cuenta con meditaciones y acceso a psicólogos profesionales </p>
-          </div></li>
-          <li><a href="https://www.figma.com/proto/2CcRa2KV3X4wRy6feETUnC/ALMA---UX-UI?page-id=0%3A1&node-id=1-6792&viewport=896%2C754%2C0.15&t=dAO313uHC6GX0BQg-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A9389" target="_blank"><button class="btn btn-primary separadorSecciones" type="button"><img src="../assets/img/accederIcono.svg" alt="Icono de mi trabajo">Acceder al prototipo</button></a>
-        </li>
-        </ul>
-
-        <video class="video-responsive separadortop" autoplay muted loop playsinline>
-    <source src="../assets/video/reelAlma.mp4" type="video/mp4">
-    </video>
-        </section>
-
-      <section class="resultado separadortop margenesLados">
-        <h2 class="h2claro">Resultado</h2>
-        <p>El diseño final propone una <strong>experiencia visual clara y emocional</strong>, que guía a jóvenes en momentos de ansiedad o estrés, facilitando el acceso a acompañamiento profesional. El foco está en la <strong> navegación intuitiva y la contención emocional desde el diseño.</strong></p>
-      </section>
-
-      <section class="aprendizaje separadortop margenesLados">
-        <h2 class="h2claro">Aprendizaje</h2>
-        <p>Este proyecto me permitió comprender la gran importancia del bienestar mental en la actualidad. Aprendí no solo a trbajar con equipos grandes de forma remota, si no también a que crear herramientas que faciliten el acceso a apoyo para la salud mental es muy beneficioso para los usuarios. Alma busca el potencial de una aplicación con muchas funciones y ventajas. Por ello, se destaca la importancia de seguir explorando y mejorando la experiencia para que los usuarios puedan aprovecharla al máximo.</p>
-      </section>
-</nav>
-
-    <section class="principio finalContenedor">
-      <div class="final margenesLados flex-wrap" style="margin: 0 auto;">
-              <button onclick="location.href='../index.html#mitrabajo'" class="btn btn-secondary btnFinal" type="button"><img src="../assets/img/miTrabajoIcon.svg" alt="Icono de mi trabajo">Mi trabajo</button>
-              <button onclick="location.href='../index.html#hablemos'" class="btn btn-primary btnFinal" type="button"><img src="../assets/img/hablemosIcon.svg" alt="Icono de mi trabajo">Hablemos</button>
-              <button onclick="location.href='../index.html#conoceme'" class="btn btn-secondary btnFinal" type="button"><img src="../assets/img/conocemeIcon.svg" alt="Icono de mi trabajo">Conóceme</button>
-              
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_problema">Problema detectado</p>
+            <p class="proceso-card-text"  data-i18n="t1_problema">Registro de emociones difícil de encontrar en barra inferior</p>
           </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_solucion">Solución</p>
+            <p class="proceso-card-text"  data-i18n="t1_solucion">Reubicado en posición central y destacada en la home</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_problema2">Problema encontrado</p>
+            <p class="proceso-card-text"  data-i18n="t2_problema">El tulipán como progreso no era comprendido sin contexto</p>
+          </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_solucion">Solución</p>
+            <p class="proceso-card-text"  data-i18n="t2_solucion">Explicación interactiva al primer uso (on-boarding) con ejemplos visuales de cómo cambia</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_problema">Problema detectado</p>
+            <p class="proceso-card-text"  data-i18n="t3_problema">Calendario poco intuitivo. No quedaba claro cómo navegar registros</p>
+          </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_solucion">Solución</p>
+            <p class="proceso-card-text"  data-i18n="t3_solucion">Rediseño con guía visual clara de fechas y estado emocional por día</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="project-section" style="margin-bottom: 2rem;" id="final">
+      <div class="project-section-header">
+        <span class="project-section-num">06.</span>
+        <h2 class="project-section-title" data-i18n="nav_final">Prototipo final y aprendizaje</h2>
+      </div>
+      <div class="project-cards">
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="f1_label">Identidad visual</p>
+          <p class="project-card-title" data-i18n="f1_title">Tulipán + nombre Alma</p>
+          <p class="project-card-desc"  data-i18n="f1_desc">El tulipán representa resiliencia, la capacidad de renacer después de la adversidad. Paleta en azules y púrpuras suaves: tranquilidad, comprensión y estabilidad. Roboto para legibilidad en momentos emocionalmente cargados.</p>
+        </div>
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="f2_label">Aprendizaje del proyecto</p>
+          <p class="project-card-title" data-i18n="f2_title">Diseño de salud mental exige empatía extra</p>
+          <p class="project-card-desc"  data-i18n="f2_desc">Primer proyecto UX en equipo con metodología de sprints. Aprendí que cada decisión de interfaz tiene impacto real en personas que atraviesan momentos difíciles. Y a defender decisiones de diseño con datos del testeo, no con intuición.</p>
+        </div>
+      </div>
+      <div class="figma-embed-wrap" style="margin-top: 2rem;">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+          src="https://embed.figma.com/proto/2CcRa2KV3X4wRy6feETUnC/ALMA---UX-UI?page-id=0%3A1&node-id=1-6792&viewport=1339%2C1183%2C0.2&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A9389&embed-host=share"
+          allowfullscreen></iframe>
+      </div>
     </section>
-      
-    <footer>
-      <div>
-       <a href="../index.html"></a> <img src="../assets/img/logo.svg" alt="">
-      </div>
-      <div>
-        <p>Mariana Mercado Villabona</p>
-        <p>© 2025 Todos los derechos reservados</p>
-      </div>
-      <div class="logosfooter">
-       <a href="https://api.whatsapp.com/send?phone=541168735084&text=Hola!" target="_blank"><img src="../assets/img/whatsapposcuro.svg" alt=""></a> 
-       <a href="mailto:marivillabona2@gmail.com" target="_blank"><img src="../assets/img/mailoscuro.svg" alt=""></a>
-       <a href="http://www.linkedin.com/in/marianamercadovillabona" target="_blank"><img src="../assets/img/linkedinoscuro.svg" alt=""></a> 
-      </div>
-    </footer>
-      </main>
 
-    <script src="../js/bootstrap.bundle.min.js"></script>
-     <script src="../js/swiper-bundle.min.js"></script>
+    <div class="project-nav-between">
+      <div class="project-nav-between-inner">
+        <a href="../pages/jetsmart.html" class="project-nav-prev">
+          <span class="nav-between-dir">
+            <span class="nav-between-arrow">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 2 4 7 9 12"/></svg>
+            </span>
+            <span data-i18n="nav_prev">Proyecto anterior</span>
+          </span>
+          <span class="nav-between-title">JetSMART</span>
+          <span class="nav-between-subtitle" data-i18n="nav_prev_sub">UX/UI · Diseño web · Conceptual</span>
+        </a>
+        <div class="project-nav-divider"></div>
+        <a href="../pages/recreo.html" class="project-nav-next">
+          <span class="nav-between-dir">
+            <span class="nav-between-arrow">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 2 10 7 5 12"/></svg>
+            </span>
+            <span data-i18n="nav_next">Proyecto siguiente</span>
+          </span>
+          <span class="nav-between-title">Re-Creo</span>
+          <span class="nav-between-subtitle" data-i18n="nav_next_sub">BRanding · Redes Sociales</span>
+        </a>
+      </div>
+    </div>
 
-    <script>
-    var swiper = new Swiper(".swiperInicio", {
-      slidesPerView: 5,
-      spaceBetween: 0,
-      freeMode: true,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: false,
-      },
-      breakpoints: {
-      768: {
-        slidesPerView: 2.2,
-        spaceBetween: 15,
-      },
-      // cuando el ancho de pantalla sea >= 1024px
-      1024: {
-        slidesPerView: 2.5,
-        spaceBetween: 100,
-      }, 
-      424: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-      },
-      414: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      390: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      375: {
-        slidesPerView: 1.8,
-        spaceBetween: 0,
-      },
-      320: {
-        slidesPerView: 1.2,
-        spaceBetween: 2,
-      },
-    },
-    });
-  </script>
+  </main>
+
+  <button class="project-nav-mobile-btn" id="sheetBtn" aria-label="Ver secciones">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+    <span id="sheetBtnLabel" data-i18n="nav_contexto">Contexto</span>
+  </button>
+
+  <div class="project-nav-mobile-overlay" id="sheetOverlay"></div>
+
+  <div class="project-nav-bottom-sheet" id="bottomSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <a href="#contexto"      class="sheet-nav-link active" data-label="Contexto"      data-i18n="nav_contexto">Contexto <span class="sheet-dot"></span></a>
+    <a href="#investigacion" class="sheet-nav-link"        data-label="Investigación" data-i18n="nav_investigacion">Investigación <span class="sheet-dot"></span></a>
+    <a href="#definicion"    class="sheet-nav-link"        data-label="Definición"    data-i18n="nav_definicion">Definición <span class="sheet-dot"></span></a>
+    <a href="#idea"          class="sheet-nav-link"        data-label="Idea"          data-i18n="nav_idea">Idea + Prototipo <span class="sheet-dot"></span></a>
+    <a href="#testeo"        class="sheet-nav-link"        data-label="Testeo"        data-i18n="nav_testeo">Testeo <span class="sheet-dot"></span></a>
+    <a href="#final"         class="sheet-nav-link"        data-label="Final"         data-i18n="nav_final">Prototipo final <span class="sheet-dot"></span></a>
+  </div>
+
+  <footer class="site-footer">
+  <div class="footer-top">
+    <a href="../index.html" class="footer-logo">
+      <img class="img-fluid" src="../favicon.ico" alt="Mariana Mercado Villabona" />
+    </a>
+
+    <div class="footer-nav">
+      <a href=""><p>Proyectos</p></a>
+      <a href=""><p>Sobre mí</p></a>
+      <a href=""><p>Contacto</p></a>
+    </div>
+    
+
+    <div class="footer-social">
+      <a href="https://wa.me/5491168735084" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img class="img-fluid" src="../assets/img/whatsapp.svg" alt="ícono Whatsapp" />
+      </a>
+      <a href="mailto:marivillabona2@gmail.com" aria-label="Correo">
+        <img class="img-fluid" src="../assets/img/mail.svg" alt="ícono mail" />
+      </a>
+      <a href="https://linkedin.com/in/marianamercadovillabona" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img class="img-fluid" src="../assets/img/linkedin.svg" alt="ícono linkedin" />
+      </a>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+    <p>© 2026 Todos los derechos reservados</p>
+    <p>Mariana Mercado Villabona</p>
+  </div>
+</footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+
   <script>
-    window.addEventListener('scroll', function() {
-  const header = document.getElementById('headerProyectos');
-  if (window.scrollY > 50) {
-    header.classList.add('shrink');
-  } else {
-    header.classList.remove('shrink');
-  }
+    const translations = {
+      es: {
+        nav_proyectos:"Proyectos", nav_sobre:"Sobre mí", nav_contacto:"Contacto",
+        nav_contexto:"Contexto", nav_investigacion:"Investigación", nav_definicion:"Definición",
+        nav_idea:"Idea + Prototipo", nav_testeo:"Testeo", nav_final:"Prototipo final y aprendizaje",
+        hero_sub:"App móvil de bienestar mental · Jóvenes 15–30 años · Curso UX/UI",
+        tag_app:"App móvil", tag_conceptual:"Conceptual",
+        c1_label:"¿Qué es Alma?", c1_title:"App de bienestar mental para jóvenes",
+        c1_desc:"Reúne en un solo lugar tres herramientas que generalmente están separadas: meditaciones guiadas, registro emocional diario y acceso a profesionales. Modelo freemium para reducir las barreras económicas que alejan a los jóvenes de la ayuda que necesitan.",
+        c2_label:"Problema Raíz", c2_title:"Nada cubre todo en un lugar accesible",
+        c2_desc:"Las apps disponibles defraudan: ofrecen solo meditaciones, tienen interfaces sobrecargadas o requieren suscripciones costosas. No existe en el mercado latinoamericano una solución integral, simple y económica de salud mental para jóvenes.",
+        inv_quote:'"Las apps solo ofrecen meditaciones, pero yo necesito que alguien me escuche." — Usuario entrevistado',
+        inv1_title:"8 entrevistas", inv1_desc:"Cuestionario en 5 áreas: contexto personal, experiencias previas, funcionalidades deseadas, seguimiento emocional e interacción con profesionales.",
+        inv2_title:"Mapa de empatía", inv2_desc:"Los usuarios sienten ansiedad, soledad y presión constante. Tienen que fingir estar bien. Sus emociones son minimizadas por su entorno.",
+        inv3_title:"6 clusters de oportunidad", inv3_desc:"Necesidad de profesionales · Apps insuficientes · Seguimiento emocional · Distracciones · Interfaz simple · Publicación de artículos.",
+        img_empatia:"Mapa de empatía", img_persona:"User persona",
+        bench_title:"Benchmark",
+        bench1_title:"Headspace", bench1_desc:"Interfaz atractiva pero restringe el contenido tras el período gratuito. Genera frustración en usuarios que no pueden pagar.",
+        bench2_title:"Yana", bench2_desc:"Apoyo emocional con IA, pero conversaciones limitadas sin suscripción. No satisface la necesidad de conexión real.",
+        bench3_title:"Meditopía", bench3_desc:"Incluye meditaciones, artículos y registro emocional pero la interfaz sobrecargada confunde a los usuarios desde el inicio.",
+        mvp_title:"MVP Definido - Funcionalidades básicas",
+        mvp1:"Chat con profesionales verificados", mvp2:"Meditaciones guiadas por categoría",
+        mvp3:"Registro emocional con calendario", mvp4:"Onboarding personalizado desde el inicio",
+        mm_desc:"Se diseñó el mapa mental para determinar la organización de secciones y jerarquía de la información dentro de la aplicación.",
+        uf_desc:"El user flow permitió visualizar el posible recorrido de un usuario en la aplicación, lo que permite entender qué secciones tienen prioridad jerárquica y qué no puede estar funcionando.",
+        whys_desc:"Realizar los 5 whys permitió comprender el propósito de la app móvil, trabajando como guía para regresar constantemente a los dolores y necesidades para siempre tenerlos en cuenta a la hora del prototipado.",
+        proto_title:"Prototipo",
+        slide1_cap:"Sección de meditaciones", slide2_cap:"On-boarding",
+        slide3_cap:"Selección de profesional de apoyo", slide4_cap:"Historial de registro diario de emociones",
+        slide5_cap:"Registro de emociones", slide6_cap:"Historial de registro diario de emociones",
+        testeo_sub:"5 usuarios testeados · Perfiles: 15–19 años, 25 años",
+        label_problema:"Problema detectado", label_problema2:"Problema encontrado", label_solucion:"Solución",
+        t1_problema:"Registro de emociones difícil de encontrar en barra inferior",
+        t1_solucion:"Reubicado en posición central y destacada en la home",
+        t2_problema:"El tulipán como progreso no era comprendido sin contexto",
+        t2_solucion:"Explicación interactiva al primer uso (on-boarding) con ejemplos visuales de cómo cambia",
+        t3_problema:"Calendario poco intuitivo. No quedaba claro cómo navegar registros",
+        t3_solucion:"Rediseño con guía visual clara de fechas y estado emocional por día",
+        f1_label:"Identidad visual", f1_title:"Tulipán + nombre Alma",
+        f1_desc:"El tulipán representa resiliencia, la capacidad de renacer después de la adversidad. Paleta en azules y púrpuras suaves: tranquilidad, comprensión y estabilidad. Roboto para legibilidad en momentos emocionalmente cargados.",
+        f2_label:"Aprendizaje del proyecto", f2_title:"Diseño de salud mental exige empatía extra",
+        f2_desc:"Primer proyecto UX en equipo con metodología de sprints. Aprendí que cada decisión de interfaz tiene impacto real en personas que atraviesan momentos difíciles. Y a defender decisiones de diseño con datos del testeo, no con intuición.",
+        nav_prev:"Proyecto anterior", nav_prev_sub:"Branding · Redes Sociales",
+        nav_next:"Proyecto siguiente", nav_next_sub:"UX/UI · Diseño web · Conceptual",
+        footer_copy:"© 2026 Todos los derechos reservados",
+        lightbox_hint:"Click para hacer zoom · ESC para cerrar",
+        sobre_img: "../assets/img/alma/mapaEmpatia.svg",
+        sobre_img2: "../assets/img/alma/userPErsona.svg",
+        proto_img: "../assets/img/alma/prototipo1.svg",
+        proto2_img: "../assets/img/alma/prototipo2.svg",
+        proto3_img: "../assets/img/alma/prototipo3.svg",
+        proto4_img: "../assets/img/alma/prototipo4.svg",
+        proto5_img: "../assets/img/alma/prototipo5.svg",
+        proto6_img: "../assets/img/alma/prototipo6.svg",
+      },
+      en: {
+        nav_proyectos:"Projects", nav_sobre:"About me", nav_contacto:"Contact",
+        nav_contexto:"Context", nav_investigacion:"Research", nav_definicion:"Definition",
+        nav_idea:"Ideation + Prototype", nav_testeo:"Testing", nav_final:"Final prototype & learnings",
+        hero_sub:"Mental wellness mobile app · Ages 15–30 · UX/UI course",
+        tag_app:"Mobile app", tag_conceptual:"Conceptual",
+        c1_label:"What is Alma?", c1_title:"Mental wellness app for young people",
+        c1_desc:"Brings together in one place three tools that are usually separate: guided meditations, daily emotional tracking and access to professionals. Freemium model to lower the economic barriers that keep young people from getting the help they need.",
+        c2_label:"Root problem", c2_title:"Nothing covers everything in one accessible place",
+        c2_desc:"Available apps let users down: they only offer meditations, have cluttered interfaces or require expensive subscriptions. There is no integrated, simple and affordable mental health solution for young people in the Latin American market.",
+        inv_quote:'"Apps only offer meditations, but I need someone to actually listen to me." — Interviewed user',
+        inv1_title:"8 interviews", inv1_desc:"Questionnaire across 5 areas: personal context, previous experiences, desired features, emotional tracking and interaction with professionals.",
+        inv2_title:"Empathy map", inv2_desc:"Users feel anxiety, loneliness and constant pressure. They have to pretend to be fine. Their emotions are minimised by those around them.",
+        inv3_title:"6 opportunity clusters", inv3_desc:"Need for professionals · Insufficient apps · Emotional tracking · Distractions · Simple interface · Article publishing.",
+        img_empatia:"Empathy map", img_persona:"User persona",
+        bench_title:"Benchmark",
+        bench1_title:"Headspace", bench1_desc:"Attractive interface but restricts content after the free trial. Generates frustration in users who can't pay.",
+        bench2_title:"Yana", bench2_desc:"AI emotional support, but conversations are limited without a subscription. Doesn't meet the need for real connection.",
+        bench3_title:"Meditopia", bench3_desc:"Includes meditations, articles and emotional tracking but the cluttered interface confuses users from the start.",
+        mvp_title:"Defined MVP — Core features",
+        mvp1:"Chat with verified professionals", mvp2:"Guided meditations by category",
+        mvp3:"Emotional tracking with calendar", mvp4:"Personalised onboarding from the start",
+        mm_desc:"The mind map was designed to determine the organisation of sections and information hierarchy within the application.",
+        uf_desc:"The user flow made it possible to visualise the potential journey of a user through the app, helping to understand which sections have hierarchical priority and what might not be working.",
+        whys_desc:"Running the 5 Whys helped understand the purpose of the mobile app, serving as a guide to constantly return to user pains and needs when making prototyping decisions.",
+        proto_title:"Prototype",
+        slide1_cap:"Meditation section", slide2_cap:"Onboarding",
+        slide3_cap:"Support professional selection", slide4_cap:"Daily emotional log history",
+        slide5_cap:"Emotion tracking", slide6_cap:"Daily emotional log history",
+        testeo_sub:"5 users tested · Profiles: ages 15–19, 25",
+        label_problema:"Issue detected", label_problema2:"Issue found", label_solucion:"Solution",
+        t1_problema:"Emotion tracking hard to find in the bottom bar",
+        t1_solucion:"Repositioned to a central, prominent location on the home screen",
+        t2_problema:"The tulip as a progress indicator wasn't understood without context",
+        t2_solucion:"Interactive explanation added during first use (onboarding) with visual examples of how it changes",
+        t3_problema:"Calendar was unintuitive — it wasn't clear how to navigate past records",
+        t3_solucion:"Redesigned with a clear visual guide showing dates and emotional state per day",
+        f1_label:"Visual identity", f1_title:"Tulip + Alma name",
+        f1_desc:"The tulip represents resilience — the ability to be reborn after adversity. Palette of soft blues and purples: calm, understanding and stability. Roboto for readability in emotionally charged moments.",
+        f2_label:"Project learnings", f2_title:"Mental health design demands extra empathy",
+        f2_desc:"First UX project done as a team using sprint methodology. I learned that every interface decision has a real impact on people going through difficult moments — and to defend design decisions with testing data, not intuition.",
+        nav_prev:"Previous project", nav_prev_sub:"Branding · Social Media",
+        nav_next:"Next project", nav_next_sub:"UX/UI · Web design · Conceptual",
+        footer_copy:"© 2026 All rights reserved",
+        lightbox_hint:"Click to zoom · ESC to close",
+        sobre_img: "../assets/img/alma/mapaEmpatia_Ingles.svg",
+        sobre_img2: "../assets/img/alma/userPErsona_Ingles.svg",
+        proto_img: "../assets/img/alma/prototipo1_Ingles.svg",
+        proto2_img: "../assets/img/alma/prototipo2_Ingles.svg",
+        proto3_img: "../assets/img/alma/prototipo3_Ingles.svg",
+        proto4_img: "../assets/img/alma/prototipo4_Ingles.svg",
+        proto5_img: "../assets/img/alma/prototipo5_Ingles.svg",
+        proto6_img: "../assets/img/alma/prototipo6_Ingles.svg",
+      },
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function applyLang(lang) {
+      const t = translations[lang];
+      if (!t) return;
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+      document.getElementById('currentLang').textContent = lang.toUpperCase();
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      document.querySelectorAll('[data-i18n-img]').forEach(el => {
+        const key = el.dataset.i18nImg;
+        if (t[key]) el.src = t[key];
+      });
+      document.querySelectorAll('.sheet-nav-link[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.dataset.label = t[key];
+      });
+      document.querySelectorAll('[data-lang]').forEach(a => {
+        a.classList.toggle('active', a.dataset.lang === lang);
+      });
+    }
+
+    applyLang(currentLang);
+
+    document.querySelectorAll('[data-lang]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        applyLang(a.dataset.lang);
+        document.getElementById('langDropdown').classList.remove('open');
+        document.getElementById('langBtn').classList.remove('open');
+        document.getElementById('langBtn').setAttribute('aria-expanded', false);
+      });
+    });
+
+    // Imágenes
+document.querySelectorAll('[data-i18n-img]').forEach(el => {
+  const key = el.dataset.i18nImg;
+  if (t[key]) el.src = t[key];
 });
   </script>
+
+  <script>
+    const langBtn = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+    langBtn.addEventListener('click', e => { e.stopPropagation(); const open = langDropdown.classList.toggle('open'); langBtn.classList.toggle('open', open); langBtn.setAttribute('aria-expanded', open); });
+    langBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); langBtn.click(); } });
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    function toggleMenu(force) { const open = typeof force === 'boolean' ? force : !mobileMenu.classList.contains('open'); mobileMenu.classList.toggle('open', open); burgerBtn.classList.toggle('open', open); burgerBtn.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; }
+    burgerBtn.addEventListener('click', e => { e.stopPropagation(); toggleMenu(); });
+    mobileOverlay.addEventListener('click', () => toggleMenu(false));
+    document.addEventListener('click', e => { if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) { langDropdown.classList.remove('open'); langBtn.classList.remove('open'); langBtn.setAttribute('aria-expanded', false); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { toggleMenu(false); langDropdown.classList.remove('open'); langBtn.classList.remove('open'); toggleSheet(false); } });
+
+    const sheetBtn = document.getElementById('sheetBtn');
+    const sheetBtnLabel = document.getElementById('sheetBtnLabel');
+    const bottomSheet = document.getElementById('bottomSheet');
+    const sheetOverlay = document.getElementById('sheetOverlay');
+    const sheetLinks = document.querySelectorAll('.sheet-nav-link');
+    function toggleSheet(force) { const open = typeof force === 'boolean' ? force : !bottomSheet.classList.contains('open'); bottomSheet.classList.toggle('open', open); sheetOverlay.classList.toggle('open', open); bottomSheet.setAttribute('aria-hidden', !open); document.body.style.overflow = open ? 'hidden' : ''; }
+    sheetBtn.addEventListener('click', () => toggleSheet());
+    sheetOverlay.addEventListener('click', () => toggleSheet(false));
+    sheetLinks.forEach(link => { link.addEventListener('click', () => setTimeout(() => toggleSheet(false), 120)); });
+
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.project-nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = `#${entry.target.id}`;
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        sheetLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        const activeSheet = document.querySelector(`.sheet-nav-link[href="${id}"]`);
+        if (activeSheet) sheetBtnLabel.textContent = activeSheet.dataset.label;
+      });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+  <script>
+    (function () {
+      const viewport = document.getElementById('resViewport');
+      const track = document.getElementById('resTrack');
+      const dotsWrap = document.getElementById('resDots');
+      if (!viewport || !track) return;
+      const slides = Array.from(track.querySelectorAll('.resultados-slide'));
+      const GAP = 24;
+      let current = 0, isDragging = false, startX = 0, dragX = 0;
+      function slidesVisible() { return window.innerWidth <= 640 ? 1 : 2; }
+      function slideWidth() { return (viewport.offsetWidth - GAP * (slidesVisible() - 1)) / slidesVisible(); }
+      function setSizes() { const w = slideWidth(); slides.forEach(s => { s.style.width = w + 'px'; }); }
+      function maxIndex() { return Math.max(0, slides.length - slidesVisible()); }
+      function buildDots() { dotsWrap.innerHTML = ''; for (let i = 0; i <= maxIndex(); i++) { const d = document.createElement('button'); d.className = 'dot' + (i === 0 ? ' active' : ''); d.setAttribute('aria-label', `Slide ${i + 1}`); d.addEventListener('click', () => goTo(i)); dotsWrap.appendChild(d); } }
+      function updateDots() { dotsWrap.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current)); }
+      function goTo(index) { current = Math.max(0, Math.min(index, maxIndex())); track.style.transform = `translateX(-${current * (slideWidth() + GAP)}px)`; updateDots(); }
+      viewport.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; dragX = 0; track.style.transition = 'none'; viewport.classList.add('grabbing'); });
+      window.addEventListener('mousemove', e => { if (!isDragging) return; dragX = e.clientX - startX; track.style.transform = `translateX(${-(current * (slideWidth() + GAP)) + dragX}px)`; });
+      window.addEventListener('mouseup', () => { if (!isDragging) return; isDragging = false; viewport.classList.remove('grabbing'); track.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; const t = slideWidth() * 0.25; if (dragX < -t) goTo(current + 1); else if (dragX > t) goTo(current - 1); else goTo(current); });
+      let touchStart = 0, touchDelta = 0;
+      viewport.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; touchDelta = 0; track.style.transition = 'none'; }, { passive: true });
+      viewport.addEventListener('touchmove', e => { touchDelta = e.touches[0].clientX - touchStart; track.style.transform = `translateX(${-(current * (slideWidth() + GAP)) + touchDelta}px)`; }, { passive: true });
+      viewport.addEventListener('touchend', () => { track.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; const t = slideWidth() * 0.25; if (touchDelta < -t) goTo(current + 1); else if (touchDelta > t) goTo(current - 1); else goTo(current); });
+      window.addEventListener('resize', () => { setSizes(); buildDots(); goTo(Math.min(current, maxIndex())); });
+      setSizes(); buildDots(); goTo(0);
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const overlay = document.getElementById('lightboxOverlay');
+      const imgEl = document.getElementById('lightboxImg');
+      const wrap = document.getElementById('lightboxWrap');
+      const closeBtn = document.getElementById('lightboxClose');
+      if (!overlay) return;
+      let isZoomed = false;
+      function openLightbox(src, alt) { imgEl.src = src; imgEl.alt = alt || ''; isZoomed = false; wrap.classList.remove('zoomed'); overlay.classList.remove('zoomed-active'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+      function closeLightbox() { overlay.classList.remove('open', 'zoomed-active'); wrap.classList.remove('zoomed'); isZoomed = false; document.body.style.overflow = ''; setTimeout(() => { imgEl.src = ''; }, 300); }
+      wrap.addEventListener('click', e => { if (isZoomed) { isZoomed = false; wrap.classList.remove('zoomed'); overlay.classList.remove('zoomed-active'); } else { const rect = imgEl.getBoundingClientRect(); imgEl.style.setProperty('transform-origin', `${((e.clientX - rect.left) / rect.width * 100).toFixed(1)}% ${((e.clientY - rect.top) / rect.height * 100).toFixed(1)}%`); isZoomed = true; wrap.classList.add('zoomed'); overlay.classList.add('zoomed-active'); } });
+      closeBtn.addEventListener('click', e => { e.stopPropagation(); closeLightbox(); });
+      overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+      document.addEventListener('click', e => { const img = e.target.closest('img.zoomable'); if (!img) return; openLightbox(img.src, img.alt); });
+      let initialDist = 0, currentScale = 1;
+      overlay.addEventListener('touchstart', e => { if (e.touches.length === 2) initialDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); }, { passive: true });
+      overlay.addEventListener('touchmove', e => { if (e.touches.length === 2) { const dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); currentScale = Math.min(4, Math.max(1, dist / initialDist * (isZoomed ? 2.5 : 1))); imgEl.style.transform = `scale(${currentScale})`; } }, { passive: true });
+      overlay.addEventListener('touchend', e => { if (e.touches.length < 2) { if (currentScale > 1.4) { isZoomed = true; wrap.classList.add('zoomed'); overlay.classList.add('zoomed-active'); } else { isZoomed = false; wrap.classList.remove('zoomed'); overlay.classList.remove('zoomed-active'); imgEl.style.transform = ''; currentScale = 1; } } });
+    })();
+  </script>
+
   </body>
 </html>

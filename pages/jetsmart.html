@@ -1,247 +1,1007 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" style="overflow-x: hidden;">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Proyecto basado en el diseño de una aplicación móvil enfocada en la salud mental. Tomando en cuenta una previa investigación de posibles usuarios se diseñó la navegación y diversas funciones para que el publico esté interesado y sobretodo le impacte en su vida cotidiana el uso de esta aplicación">
-    <meta name="keywords" content="PROYECTOS, PORTAFOLIO, TRABAJO, FREELANCE, APLICACION, DISEÑO, UX, UI, INVESTIGACION, VIAJES, TURISMO, REDISEÑO, AEROLINEA, FIGMA">
-    <title>JetSMART | Mariana Mercado</title>
+    <meta name="description" content="Portafolio de Mariana Mercado, enfocada en el diseño ux/ui y en el desarrollo web front-end">
+    <meta name="keywords" content="PROYECTOS, PORTAFOLIO, TRABAJO, FREELANCE, CONTACTAME, CONOCEME, MARIANA MERCADO, ESTUDIANTE, DISEÑO UX/UI, DESARROLLO WEB, FRONT-END, TRABAJADORA, DISEÑADORA, DESARROLLADOR, DESARROLLADORA">
+    <title>Portafolio | Mariana Mercado</title>
     <link rel="icon" href="../favicon.ico" type="image/png">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/hover-min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
+
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <div class="lightbox-img-wrap" id="lightboxWrap">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+    <p class="lightbox-hint" data-i18n="lightbox_hint">Click para hacer zoom · ESC para cerrar</p>
+  </div>
+
   <body>
-    <header id="headerProyectos">
-        <nav class="">
-          <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.svg" alt="Logo MMVI"></a>
-          <div class="menuHeader">
-            <div class="dropdown">
-          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ES <img src="../assets/img/flechaDropdown.svg" alt="Flecha hacia abajo" class="icono-dropdown">
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./jetsmartE.html">English</a></li>
-          </ul>
-        </div>
-        <div  class="cerrar"><a href="../index.html"><img src="../assets/img/cerrar.svg" alt=""></a></div>
+
+  <!-- HEADER -->
+  <div class="headerProyectos">
+    <header>
+      <div class="header-left">
+        <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="logo" aria-label="MVI Home">
+          <img src="../favicon.ico" alt="logo">
+        </a>
+      </div>
+
+      <nav>
+        <a href="../index.html#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+        <a href="../index.html#sobre-mi"  data-i18n="nav_sobre">Sobre mí</a>
+        <a href="../index.html#contacto"  data-i18n="nav_contacto">Contacto</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-container">
+          <div class="lang" id="langBtn" role="button" aria-expanded="false" tabindex="0">
+            <span id="currentLang">ES</span>
+            <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#2a1f2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-      </nav></header>
-
-      <main>
-        <section class="principio separadortop">
-          <div class="textoYmockup">
-              <div class="texto margenesLados">
-              <h1 class=""><strong>JetSMART</strong></h1>
-            <p style="color: #3A2C39;">Proyecto de rediseño de la página web de la aerolínea, enfocado en mejorar la experiencia de compra y selección de pasajes aéreos. </p>
-            <ul>
-              <li>🎨Rol: Rediseño de producto (UX/UI)</li>
-              <li>🛠 Herramientas: Figma, Adobe Illustrator, Adobe Photoshop.</li>
-            </ul> 
-            <p class="aclaracion">*Nota: Esto en un proyecto conceptual.</p>
-            </div>
-            <div class=" jetsmartMockup">
-              <img src="../assets/img/jetsmart/jetsmartmockup.svg" alt="">
-            </div>
-          </div>          
-        </section>
-
-        <section class="desafio margenesLados separadortop">
-          <h2 class="h2claro">Desafío</h2>
-          <p class="separadorSecciones">El principal desafío fue que la página web de JetSMART no cumplía con varias <strong>leyes heurísticas y de UX</strong>, lo que generaba malas experiencias para los usuarios. El objetivo era rediseñar la web para mejorar el diseño visual y el proceso de compra, con la meta de aumentar las ventas y las buenas calificaciones</p>
-        </section>
-
-        <section class="procesoDiseno margenesLados separadortop">
-          <h2 class="h2claro">Proceso de diseño</h2>
-          
-          <!-- ACORDEON ----------------------  -->
-          <div class="accordion accordion-flush separadorSecciones" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Investigación
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <ul class="d-flex flex-column">
-              <p>Para entender las necesidades y molestias de los usuarios, se realizó una <strong>encuesta a 12 personas</strong> que habían comprado pasajes. La conclusión fue que el diseño visual y la facilidad del proceso de compra son fundamentales, pero la página actual de JetSMART <strong>no cumplía estas expectativas, generando malas experiencias</strong>.</p>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" data-lang="es">ES</a>
+            <a href="#" data-lang="en">EN</a>
+            <a href="#" data-lang="pt">PT</a>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Definición
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <p>Con los hallazgos de la encuesta, se definieron dos user personas clave: Lucía, una profesional organizada que busca ofertas y llevar todas sus maletas; y una persona que ayuda a sus familiares y quiere viajar cómodamente con mascotas. También se utilizó un mapa de trayectoria para visualizar los sentimientos del usuario en cada etapa del proceso.</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Ideación
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <p>Se usó una <strong>matriz de factibilidad, deseabilidad y viabilidad</strong> para asegurar que el proyecto cumpliera con las expectativas del usuario, producto y negocio. Se definió la <strong>arquitectura de la información</strong> para organizar los contenidos y se aplicó el Círculo de Oro para conectar con el usuario: ¿Por qué? Brindar comodidad y seguridad; ¿Cómo? A través de un diseño intuitivo; ¿Qué? Control total de la compra y personalización del viaje</p>
-          </div>
-        </div>
+    </header>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-panel">
+      <a href="../index.html#proyectos"><span class="dot"></span><span data-i18n="nav_proyectos">Proyectos</span></a>
+      <a href="../index.html#sobre-mi"><span class="dot"></span><span data-i18n="nav_sobre">Sobre mí</span></a>
+      <a href="../index.html#contacto"><span class="dot"></span><span data-i18n="nav_contacto">Contacto</span></a>
+      <div class="mobile-divider"></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="project-hero">
+    <div class="project-hero-left">
+      <span class="project-year">2024</span>
+      <h1 class="project-title">JetSMART</h1>
+      <p data-i18n="hero_sub">Rediseño web de aerolínea low cost · Flujo de compra de pasajes</p>
+      <div class="card-tags">
+        <span class="tag tagsRosados">UX Research</span>
+        <span class="tag tagsRosados">UI Design</span>
+        <span class="tag tagsRosados">Design System</span>
+        <span class="tag tagsRosados" data-i18n="tag_conceptual">Conceptual</span>
+        <span class="tag tagsRosados">Figma</span>
       </div>
     </div>
-        </section>
+    <div class="project-hero-right">
+      <img class="img-fluid" style="max-width: 80%;" src="../assets/img/jetsmart/portada.png" alt="Mockup rediseño web"/>
+    </div>
+  </section>
 
-        <section class="separadortop">
-          <h2 class="h2claro margenesLados">Mockups</h2>
+  <!-- STICKY NAV -->
+  <div class="project-nav-wrap">
+    <nav class="project-nav">
+      <a href="#contexto"    class="project-nav-link active" data-i18n="nav_contexto">Contexto</a>
+      <a href="#problema"    class="project-nav-link"        data-i18n="nav_problema">Problema</a>
+      <a href="#encuesta"    class="project-nav-link"        data-i18n="nav_encuesta">Encuesta y benchmarking</a>
+      <a href="#arquitectura" class="project-nav-link"       data-i18n="nav_arquitectura">Arquitectura</a>
+      <a href="#decisiones"  class="project-nav-link"        data-i18n="nav_decisiones">Decisiones de diseño</a>
+      <a href="#design"      class="project-nav-link"        data-i18n="nav_design">Design system</a>
+      <a href="#testeo"      class="project-nav-link"        data-i18n="nav_testeo">Testeo e iteración</a>
+    </nav>
+  </div>
 
-          <!--CARRUSEL IMAGENES-->
-        <div class="swiper swiperInicio separadorSecciones">
-          <!-- Swiper -->
-        <div class="swiper swiperTrayectoria separadorSecciones margenesLados">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide proyectoYtexto">
-              <img src="../assets/img/jetsmart/mockup1.svg" alt="Mockup 1 JetSMART">
-              </ul>
-            </div>
-            <div class="swiper-slide proyectoYtexto">
-              <img src="../assets/img/jetsmart/mockup2.svg" alt="Mockup 2 JetSMART">
-              </ul>
-            </div>
-            <div class="swiper-slide proyectoYtexto">
-              <img src="../assets/img/jetsmart/mockup3.svg" alt="Mockup 3 JetSMART">
-              </ul>
-            </div>
-            <div class="swiper-slide proyectoYtexto">
-              <img src="../assets/img/jetsmart/mockup4.svg" alt="Mockup 4 JetSMART">
-              </ul>
-            </div>
-            <div class="swiper-slide proyectoYtexto">
-              <img src="../assets/img/jetsmart/mockup5.svg" alt="Mockup 5 JetSMART">
-              </ul>
-            </div>
-            <div class="swiper-slide proyectoYtexto">
-              <img src="../assets/img/jetsmart/mockup6.svg" alt="Mockup 6 JetSMART">
-              </ul>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+  <main>
+
+    <!-- 01. CONTEXTO -->
+    <section class="project-section" style="margin-top: 2rem;" id="contexto">
+      <div class="project-section-header">
+        <span class="project-section-num">01.</span>
+        <h2 class="project-section-title" data-i18n="nav_contexto">Contexto</h2>
+      </div>
+      <div class="d-flex justify-content-around flex-wrap gap-4" style="margin-top: 2rem;">
+        <div class="d-flex flex-column align-items-center">
+          <h4 class="fw-bold fw-4">6M</h4>
+          <p data-i18n="stat_visitas">Visitas mensuales</p>
         </div>
-          <div class="swiper-pagination"></div>
+        <div class="d-flex flex-column align-items-center">
+          <h4 class="fw-bold fw-4">37.1%</h4>
+          <p data-i18n="stat_rebote">tasa de rebote</p>
         </div>
-
-        <ul class="ulcheckmockups separadortop margenesLados">
-          <li><div class="checksMockups">
-            <img src="../assets/img/check.svg" alt="icono check">
-            <p>Se detalla el proceso de selección y compra de tiquetes.</p>
-          </div></li>
-          <li><div class="checksMockups">
-            <img src="../assets/img/check.svg" alt="icono check">
-            <p>Permite un mejor flujo de compra para el usuario.</p>
-          </div></li>
-          <li><a href="https://www.figma.com/proto/QoTF3zQEZCZfwCmhYTKJz8/re-dise%C3%B1o-final?page-id=0%3A1&node-id=112-851&viewport=-5410%2C-1103%2C0.58&t=xrRW0hJyzfn9Ct3k-1&scaling=contain&content-scaling=fixed" target="_blank"><button class="btn btn-primary separadorSecciones" type="button"><img src="../assets/img/accederIcono.svg" alt="Icono de mi trabajo">Acceder al prototipo</button></a>
-        </li>
-        </ul>
-        </section>
-
-      <section class="resultado separadortop margenesLados">
-        <h2 class="h2claro">Resultado</h2>
-        <p>Se comenzaron a dibujar <strong>wireframes de baja fidelidad</strong> para el diseño de la página de inicio, búsqueda de vuelos y personalización del viaje. Luego, se creó una <strong>guía de estilos</strong> para mantener la esencia de la marca JetSMART. El prototipo de alta fidelidad fue sometido a un <strong>testeo de usabilidad</strong> con resultados muy positivos, demostrando que la navegación era adecuada</p>
-      </section>
-
-      <section class="aprendizaje separadortop margenesLados">
-        <h2 class="h2claro">Aprendizaje</h2>
-        <p>Este proyecto subraya la importancia de que una aerolínea en crecimiento como JetSMART ofrezca una experiencia apta para todo su público, brindando tranquilidad y comodidad. Es crucial que las mejoras sean revisadas y actualizadas constantemente para asegurar una navegación fluida y sencilla, permitiendo a los usuarios "volar a su manera".</p>
-      </section>
-</nav>
-
-    <section class="principio finalContenedor">
-      <div class="final margenesLados flex-wrap" style="margin: 0 auto;">
-              <button onclick="location.href='../index.html#mitrabajo'" class="btn btn-secondary btnFinal" type="button"><img src="../assets/img/miTrabajoIcon.svg" alt="Icono de mi trabajo">Mi trabajo</button>
-              <button onclick="location.href='../index.html#hablemos'" class="btn btn-primary btnFinal" type="button"><img src="../assets/img/hablemosIcon.svg" alt="Icono de mi trabajo">Hablemos</button>
-              <button onclick="location.href='../index.html#conoceme'" class="btn btn-secondary btnFinal" type="button"><img src="../assets/img/conocemeIcon.svg" alt="Icono de mi trabajo">Conóceme</button>
-              
-          </div>
+        <div class="d-flex flex-column align-items-center">
+          <h4 class="fw-bold fw-4">#3</h4>
+          <p data-i18n="stat_viajes">Viajes Argentina</p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <h4 class="fw-bold fw-4">0%</h4>
+          <p data-i18n="stat_recomendacion">Lo recomendarían</p>
+        </div>
+      </div>
+      <div class="project-card" style="margin-top: 1rem;">
+        <p class="project-card-label" data-i18n="contexto_label">¿Por qué rediseñar?</p>
+        <p class="project-card-desc"  data-i18n="contexto_desc">Un sitio con millones de visitas pero con 37% de rebote y 0% de recomendación entre los encuestados indica un problema estructural grave de experiencia de usuario. El sitio incumplía múltiples heurísticas de usabilidad que afectaban directamente la conversión y la percepción de confianza en la aerolínea.</p>
+      </div>
     </section>
-      
-    <footer>
-      <div>
-       <a href="../index.html"></a> <img src="../assets/img/logo.svg" alt="">
-      </div>
-      <div>
-        <p>Mariana Mercado Villabona</p>
-        <p>© 2025 Todos los derechos reservados</p>
-      </div>
-      <div class="logosfooter">
-       <a href="https://api.whatsapp.com/send?phone=541168735084&text=Hola!" target="_blank"><img src="../assets/img/whatsapposcuro.svg" alt=""></a> 
-       <a href="mailto:marivillabona2@gmail.com" target="_blank"><img src="../assets/img/mailoscuro.svg" alt=""></a>
-       <a href="http://www.linkedin.com/in/marianamercadovillabona" target="_blank"><img src="../assets/img/linkedinoscuro.svg" alt=""></a> 
-      </div>
-    </footer>
-      </main>
 
-    <script src="../js/bootstrap.bundle.min.js"></script>
-     <script src="../js/swiper-bundle.min.js"></script>
+    <!-- 02. EL PROBLEMA -->
+    <section class="project-section" id="problema" style="margin-bottom: 3rem;">
+      <div class="project-section-header">
+        <span class="project-section-num">02.</span>
+        <h2 class="project-section-title" data-i18n="nav_problema">Problema</h2>
+        <p class="project-proceso-subtitle" data-i18n="problema_sub">Visual y estructural</p>
+      </div>
 
-    <script>
-    var swiper = new Swiper(".swiperTrayectoria", {
-      slidesPerView: 2.5,
-      spaceBetween: 200,
-      freeMode: true,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: false,
+      <div class="project-cards-row">
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p1_title">Vuelos mezclados</p>
+          <p class="project-card-desc"  data-i18n="p1_desc">Ida y vuelta en una misma pantalla. Los usuarios perdían la referencia de qué vuelo estaban seleccionando en cada momento.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p2_title">Maletas sorpresa</p>
+          <p class="project-card-desc"  data-i18n="p2_desc">Equipaje preseleccionado por defecto que aumentaba el precio sin que el usuario lo decidiera. Generaba desconfianza inmediata.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p3_title">Proceso obligatorio</p>
+          <p class="project-card-desc"  data-i18n="p3_desc">Personalización lineal y larga que forzaba al usuario a pasar por todos los pasos sin poder saltear lo que no necesitaba.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p4_title">Home sobrecargada</p>
+          <p class="project-card-desc"  data-i18n="p4_desc">Demasiado contenido compitiendo por la atención. El buscador de vuelos (la función principal) se perdía entre imágenes y texto.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p5_title">Botones inconsistentes</p>
+          <p class="project-card-desc"  data-i18n="p5_desc">Sin estilo predeterminado. En algunos casos no era reconocible qué era un botón y qué no.</p>
+        </div>
+        <div class="project-card-outline">
+          <p class="project-card-title" data-i18n="p6_title">Asientos confusos</p>
+          <p class="project-card-desc"  data-i18n="p6_desc">Demasiada información en la selección de asientos. Los usuarios describían la experiencia como confusa y abrumadora.</p>
+        </div>
+      </div>
+
+      <div class="project-identity-challenge" style="margin-top: 2rem;">
+        <p class="project-identity-challenge-title" data-i18n="problema_quote">"Hay demasiada información al momento de seleccionar el asiento y confunde y aturde." — Usuario encuestado</p>
+      </div>
+    </section>
+
+    <div class="project-lila-bg" style="margin-top: 2rem;">
+
+      <!-- 03. ENCUESTA Y BENCHMARKING -->
+      <section class="project-section" id="encuesta">
+        <div class="project-section-header">
+          <span class="project-section-num">03.</span>
+          <h2 class="project-section-title" data-i18n="nav_encuesta">Encuesta y benchmarking</h2>
+        </div>
+
+        <div class="d-flex gap-5 benchmarking-jetsmart" style="margin-top: 1rem;">
+          <div class="project-card" style="margin-top: 1rem; background-color: #f9f9f9;">
+            <p class="project-card-label" data-i18n="enc_label">12 encuestados · 18–40 años</p>
+            <p class="project-card-title" data-i18n="enc_title">Prioridades del usuario al comprar</p>
+            <p class="project-card-desc"  data-i18n="enc_desc">1. Comodidad · 2. Seguridad · 3. Precio · 4. Ofertas. Los usuarios esperan simplicidad: un proceso claro donde el precio final sea predecible y el flujo no los sorprenda negativamente.</p>
+          </div>
+          <div class="project-card" style="margin-top: 1rem; background-color: #f9f9f9;">
+            <p class="project-card-label" data-i18n="bench_label">Avianca · LATAM · Wingo</p>
+            <p class="project-card-title" data-i18n="bench_title">3 aprendizajes del benchmarking</p>
+            <p class="project-card-desc"  data-i18n="bench_desc">1. Información desplegable reduce carga visual (Avianca). <br> 2. Detalle de compra visible en todo momento genera confianza (LATAM). <br> 3. Servicios adicionales breves permiten decisiones rápidas (Wingo)</p>
+          </div>
+        </div>
+        <img class="img-fluid zoomable" data-i18n-img="sobre_img" style="border-radius: 10px; margin-top: 3rem;" src="../assets/img/jetsmart/tablaComparativa.svg" alt="Tabla comparativa fortalezas, debilidades, constantes y variables">
+      </section>
+
+      <!-- 04. ARQUITECTURA -->
+      <section class="project-resultados" id="arquitectura">
+        <div class="project-resultados-inner">
+          <div class="project-section-header" style="margin-top: 0; margin-bottom: 0;">
+            <span class="project-section-num">04.</span>
+            <h2 class="project-section-title" data-i18n="nav_arquitectura">Arquitectura</h2>
+          </div>
+
+          <section class="comparison-section">
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p class="comparison-col-label" data-i18n="arq_antes_label">Arquitectura de la información web actual</p>
+                <div class="comparison-img-wrap">
+                  <img class="img-fluis zoomable" src="../assets/img/jetsmart/arquitecturaActual.svg" alt="Arquitectura de la información antes">
+                </div>
+              </div>
+              <div class="comparison-arrow" aria-hidden="true">
+                <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0" y1="12" x2="38" y2="12" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M34 4L44 12L34 20" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="comparison-arrow-down" aria-hidden="true">
+                <svg viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="12" y1="0" x2="12" y2="38" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M4 34L12 44L20 34" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="comparison-col">
+                <p class="comparison-col-label" data-i18n="arq_despues_label">Arquitectura de la información propuesta</p>
+                <div class="comparison-img-wrap">
+                  <img class="img-fluis zoomable" src="../assets/img/jetsmart/arquitecturaPropuesta.svg" alt="Arquitectura de la información después">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div style="margin-top: 2rem;">
+            <div class="benchmark">
+              <div class="project-identity-challenge">
+                <p class="project-card-title"              data-i18n="arq_c1_title">4 tareas evaluadas</p>
+                <p class="project-identity-challenge-desc" data-i18n="arq_c1_desc">Las 4 mostraron mejoras en la arquitectura propuesta respecto a la actual.</p>
+              </div>
+              <div class="project-identity-challenge">
+                <p class="project-card-title"              data-i18n="arq_c2_title">Pago — sección más intuitiva</p>
+                <p class="project-identity-challenge-desc" data-i18n="arq_c2_desc">Fue la tarea con mejores resultados y mayor acierto entre los usuarios del tree testing.</p>
+              </div>
+              <div class="project-identity-challenge">
+                <p class="project-card-title"              data-i18n="arq_c3_title">Tarjeta de embarque</p>
+                <p class="project-identity-challenge-desc" data-i18n="arq_c3_desc">Requirió reubicación, los usuarios no la encontraban en su posición original.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. DECISIONES DE DISEÑO -->
+      <section style="margin-top: -1rem;" class="project-section" id="decisiones">
+        <div class="project-section-header" style="margin-top: 0; margin-bottom: 36px;">
+          <span class="project-section-num">05.</span>
+          <h2 class="project-section-title" data-i18n="nav_decisiones">Decisiones de diseño</h2>
+        </div>
+
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+            <p class="proceso-card-text"  data-i18n="d1_antes">Vuelo de ida y vuelta en una misma pantalla</p>
+          </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+            <p class="proceso-card-text"  data-i18n="d1_despues">Ida en una pantalla, vuelta en otra, claridad total en cada elección</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+            <p class="proceso-card-text"  data-i18n="d2_antes">Personalización lineal obligatoria: el usuario debe pasar por todo</p>
+          </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+            <p class="proceso-card-text"  data-i18n="d2_despues">Sección unificada donde el usuario elige qué quiere personalizar</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+            <p class="proceso-card-text"  data-i18n="d3_antes">Maletas preseleccionadas que aumentan el precio sin aviso</p>
+          </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+            <p class="proceso-card-text"  data-i18n="d3_despues">Selección limpia de equipaje, sin preselección, precio siempre visible</p>
+          </div>
+        </div>
+        <hr>
+
+        <div class="proceso-row">
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_antes">Antes</p>
+            <p class="proceso-card-text"  data-i18n="d4_antes">Botones inconsistentes: difícil identificar qué es clickeable</p>
+          </div>
+          <div class="proceso-arrow" aria-hidden="true">
+            <svg viewBox="0 0 40 20" fill="none"><line x1="0" y1="10" x2="32" y2="10" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M28 4L36 10L28 16" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 20 36" fill="none"><line x1="10" y1="0" x2="10" y2="28" stroke="#955AB1" stroke-width="2" stroke-linecap="round"/><path d="M4 24L10 32L16 24" stroke="#955AB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="proceso-card">
+            <p class="proceso-card-label" data-i18n="label_despues">Después</p>
+            <p class="proceso-card-text"  data-i18n="d4_despues">Sistema de botones con 5 variantes documentadas en el design system</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 06. DESIGN SYSTEM -->
+    <section class="project-section" style="margin-bottom: 2rem;" id="design">
+      <div class="project-section-header">
+        <span class="project-section-num">06.</span>
+        <h2 class="project-section-title" data-i18n="nav_design">Design System</h2>
+      </div>
+      <div class="project-cards">
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="ds1_label">Tipografía + paleta</p>
+          <p class="project-card-title" data-i18n="ds1_title">Clan Pro + Lato · 5 colores base</p>
+          <p class="project-card-desc"  data-i18n="ds1_desc">Clan Pro para títulos (limpia y moderna). Lato para cuerpo de texto. Paleta con primarios de marca (#0F446C azul + #BC2133 rojo), neutros y colores semánticos para estados de error, advertencia y éxito.</p>
+        </div>
+        <div class="project-card">
+          <p class="project-card-label" data-i18n="ds2_label">UX writing</p>
+          <p class="project-card-title" data-i18n="ds2_title">Reglas para cada tipo de texto</p>
+          <p class="project-card-desc"  data-i18n="ds2_desc">Botones: una sola palabra, sin puntuación. Errores: máximo un renglón, no juzgantes. Confirmaciones: cortas, amigables, pueden usar signo de exclamación. Precios: siempre con símbolo $ y tipo de moneda en el total.</p>
+        </div>
+      </div>
+      <div style="margin-top: 2rem;">
+        <div class="resultados-carousel-wrap">
+          <div class="resultados-carousel-viewport" id="resViewport">
+            <div class="resultados-carousel-track" id="resTrack">
+              <div class="resultados-slide"><img class="img-fluid zoomable" src="../assets/img/jetsmart/style1.svg" alt="Style Tile"></div>
+              <div class="resultados-slide"><img class="img-fluid zoomable" src="../assets/img/jetsmart/style2.svg" alt="Style Tile"></div>
+              <div class="resultados-slide"><img class="img-fluid zoomable" src="../assets/img/jetsmart/style3.svg" alt="Style Tile"></div>
+              <div class="resultados-slide"><img class="img-fluid zoomable" src="../assets/img/jetsmart/style4.svg" alt="Style Tile"></div>
+            </div>
+          </div>
+          <div class="resultados-dots" id="resDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. TESTEO E ITERACIÓN -->
+    <section class="project-section" style="margin-bottom: 2rem;" id="testeo">
+      <div class="project-section-header">
+        <span class="project-section-num">07.</span>
+        <h2 class="project-section-title" data-i18n="nav_testeo">Testeo de usabilidad e iteración</h2>
+        <p data-i18n="testeo_sub">3 usuarios · Remoto moderado · 15 min por sesión · 4 tareas</p>
+      </div>
+
+      <div>
+        <div class="retos-group" id="jetsmartTesteo" style="margin-bottom: 0;">
+          <p class="retos-group-label" data-i18n="testeo_funciono">Lo que funcionó</p>
+          <div class="retos-cards">
+            <div class="retos-card logro" data-i18n="t_logro1">Sistema de filtros con palabras clave en búsqueda de tiquetes</div>
+            <div class="retos-card logro" data-i18n="t_logro2">Menú de inicio intuitivo: evasión natural de errores</div>
+            <div class="retos-card logro" data-i18n="t_logro3">Personalización de viaje condensada y comprensible</div>
+            <div class="retos-card logro" data-i18n="t_logro4">Organización del equipaje clara y sin sorpresas</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem;">
+        <p class="retos-group-label" data-i18n="testeo_no_funciono">Lo que no funcionó → acción</p>
+
+        <div class="comparison-row" style="padding: 0;">
+          <div class="comparison-col" style="margin-top: 1rem;">
+            <div class="retos-card reto" data-i18n="t_reto1">No quedaba claro que el filtro era multiselección</div>
+          </div>
+          <div class="comparison-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 24" fill="none"><line x1="0" y1="12" x2="38" y2="12" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round"/><path d="M34 4L44 12L34 20" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="comparison-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 24 48" fill="none"><line x1="12" y1="0" x2="12" y2="38" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round"/><path d="M4 34L12 44L20 34" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="comparison-col">
+            <div class="retos-card logro" data-i18n="t_accion1">Rediseñar presentación visual del filtro</div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <div class="retos-card reto" data-i18n="t_reto2">Títulos de sección poco visibles en el proceso</div>
+          </div>
+          <div class="comparison-arrow" aria-hidden="true">
+            <svg viewBox="0 0 48 24" fill="none"><line x1="0" y1="12" x2="38" y2="12" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round"/><path d="M34 4L44 12L34 20" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="comparison-arrow-down" aria-hidden="true">
+            <svg viewBox="0 0 24 48" fill="none"><line x1="12" y1="0" x2="12" y2="38" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round"/><path d="M4 34L12 44L20 34" stroke="#955AB1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="comparison-col">
+            <div class="retos-card logro" data-i18n="t_accion2">Mejorar contraste y color de indicadores de etapa</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 4rem;">
+        <h4 class="fw-bold fs-4 text-center" data-i18n="prototipo_title">Prototipo final</h4>
+        <div class="figma-embed-wrap" style="margin-top: 2rem;">
+          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+            src="https://embed.figma.com/proto/QoTF3zQEZCZfwCmhYTKJz8/re-dise%C3%B1o-final?page-id=0%3A1&node-id=112-851&viewport=-2691%2C-188%2C0.24&scaling=min-zoom&content-scaling=fixed&embed-host=share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVEGACIÓN ENTRE PROYECTOS -->
+    <div class="project-nav-between">
+      <div class="project-nav-between-inner">
+        <a href="../pages/domus.html" class="project-nav-prev">
+          <span class="nav-between-dir">
+            <span class="nav-between-arrow">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 2 4 7 9 12"/>
+              </svg>
+            </span>
+            <span data-i18n="nav_prev">Proyecto anterior</span>
+          </span>
+          <span class="nav-between-title">Domus</span>
+          <span class="nav-between-subtitle" data-i18n="nav_prev_sub">Diseño y desarrollo Web · Identidad visual</span>
+        </a>
+        <div class="project-nav-divider"></div>
+        <a href="../pages/alma.html" class="project-nav-next">
+          <span class="nav-between-dir">
+            <span class="nav-between-arrow">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="5 2 10 7 5 12"/>
+              </svg>
+            </span>
+            <span data-i18n="nav_next">Proyecto siguiente</span>
+          </span>
+          <span class="nav-between-title">Alma</span>
+          <span class="nav-between-subtitle" data-i18n="nav_next_sub">UX/UI · Diseño aplicación móvil · Conceptual</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BOTTOM SHEET MOBILE -->
+  <button class="project-nav-mobile-btn" id="sheetBtn" aria-label="Ver secciones">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+    <span id="sheetBtnLabel" data-i18n="nav_contexto">Contexto</span>
+  </button>
+
+  <div class="project-nav-mobile-overlay" id="sheetOverlay"></div>
+
+  <div class="project-nav-bottom-sheet" id="bottomSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <a href="#contexto"     class="sheet-nav-link active" data-label="Contexto"           data-i18n="nav_contexto">Contexto           <span class="sheet-dot"></span></a>
+    <a href="#problema"     class="sheet-nav-link"        data-label="Problema"            data-i18n="nav_problema">Problema            <span class="sheet-dot"></span></a>
+    <a href="#encuesta"     class="sheet-nav-link"        data-label="Encuesta"            data-i18n="nav_encuesta">Encuesta y benchmarking <span class="sheet-dot"></span></a>
+    <a href="#arquitectura" class="sheet-nav-link"        data-label="Arquitectura"        data-i18n="nav_arquitectura">Arquitectura        <span class="sheet-dot"></span></a>
+    <a href="#decisiones"   class="sheet-nav-link"        data-label="Decisiones"          data-i18n="nav_decisiones">Decisiones de diseño <span class="sheet-dot"></span></a>
+    <a href="#design"       class="sheet-nav-link"        data-label="Design system"       data-i18n="nav_design">Design system       <span class="sheet-dot"></span></a>
+    <a href="#testeo"       class="sheet-nav-link"        data-label="Testeo"              data-i18n="nav_testeo">Testeo e iteración  <span class="sheet-dot"></span></a>
+  </div>
+
+  <!-- FOOTER -->
+ <footer class="site-footer">
+  <div class="footer-top">
+    <a href="../index.html" class="footer-logo">
+      <img class="img-fluid" src="../favicon.ico" alt="Mariana Mercado Villabona" />
+    </a>
+
+    <div class="footer-nav">
+      <a href=""><p>Proyectos</p></a>
+      <a href=""><p>Sobre mí</p></a>
+      <a href=""><p>Contacto</p></a>
+    </div>
+    
+
+    <div class="footer-social">
+      <a href="https://wa.me/5491168735084" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img class="img-fluid" src="../assets/img/whatsapp.svg" alt="ícono Whatsapp" />
+      </a>
+      <a href="mailto:marivillabona2@gmail.com" aria-label="Correo">
+        <img class="img-fluid" src="../assets/img/mail.svg" alt="ícono mail" />
+      </a>
+      <a href="https://linkedin.com/in/marianamercadovillabona" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img class="img-fluid" src="../assets/img/linkedin.svg" alt="ícono linkedin" />
+      </a>
+    </div>
+  </div>
+
+  <hr>
+  <div class="footer-bottom">
+    <p>© 2026 Todos los derechos reservados</p>
+    <p>Mariana Mercado Villabona</p>
+  </div>
+</footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+
+  <!-- ══════════════════════════════════════════════════
+       TRADUCCIONES
+       Para agregar texto nuevo: agregá la clave en los
+       tres idiomas y poné data-i18n="clave" en el HTML.
+  ══════════════════════════════════════════════════ -->
+  <script>
+    const translations = {
+
+      es: {
+        nav_proyectos:      "Proyectos",
+        nav_sobre:          "Sobre mí",
+        nav_contacto:       "Contacto",
+        nav_contexto:       "Contexto",
+        nav_problema:       "Problema",
+        nav_encuesta:       "Encuesta y benchmarking",
+        nav_arquitectura:   "Arquitectura",
+        nav_decisiones:     "Decisiones de diseño",
+        nav_design:         "Design system",
+        nav_testeo:         "Testeo e iteración",
+        hero_sub:           "Rediseño web de aerolínea low cost · Flujo de compra de pasajes",
+        tag_conceptual:     "Conceptual",
+        stat_visitas:       "Visitas mensuales",
+        stat_rebote:        "tasa de rebote",
+        stat_viajes:        "Viajes Argentina",
+        stat_recomendacion: "Lo recomendarían",
+        contexto_label:     "¿Por qué rediseñar?",
+        contexto_desc:      "Un sitio con millones de visitas pero con 37% de rebote y 0% de recomendación entre los encuestados indica un problema estructural grave de experiencia de usuario. El sitio incumplía múltiples heurísticas de usabilidad que afectaban directamente la conversión y la percepción de confianza en la aerolínea.",
+        problema_sub:       "Visual y estructural",
+        p1_title:           "Vuelos mezclados",
+        p1_desc:            "Ida y vuelta en una misma pantalla. Los usuarios perdían la referencia de qué vuelo estaban seleccionando en cada momento.",
+        p2_title:           "Maletas sorpresa",
+        p2_desc:            "Equipaje preseleccionado por defecto que aumentaba el precio sin que el usuario lo decidiera. Generaba desconfianza inmediata.",
+        p3_title:           "Proceso obligatorio",
+        p3_desc:            "Personalización lineal y larga que forzaba al usuario a pasar por todos los pasos sin poder saltear lo que no necesitaba.",
+        p4_title:           "Home sobrecargada",
+        p4_desc:            "Demasiado contenido compitiendo por la atención. El buscador de vuelos (la función principal) se perdía entre imágenes y texto.",
+        p5_title:           "Botones inconsistentes",
+        p5_desc:            "Sin estilo predeterminado. En algunos casos no era reconocible qué era un botón y qué no.",
+        p6_title:           "Asientos confusos",
+        p6_desc:            "Demasiada información en la selección de asientos. Los usuarios describían la experiencia como confusa y abrumadora.",
+        problema_quote:     '"Hay demasiada información al momento de seleccionar el asiento y confunde y aturde." — Usuario encuestado',
+        enc_label:          "12 encuestados · 18–40 años",
+        enc_title:          "Prioridades del usuario al comprar",
+        enc_desc:           "1. Comodidad · 2. Seguridad · 3. Precio · 4. Ofertas. Los usuarios esperan simplicidad: un proceso claro donde el precio final sea predecible y el flujo no los sorprenda negativamente.",
+        bench_label:        "Avianca · LATAM · Wingo",
+        bench_title:        "3 aprendizajes del benchmarking",
+        bench_desc:         "1. Información desplegable reduce carga visual (Avianca). <br> 2. Detalle de compra visible en todo momento genera confianza (LATAM). <br> 3. Servicios adicionales breves permiten decisiones rápidas (Wingo)",
+        arq_antes_label:    "Arquitectura de la información web actual",
+        arq_despues_label:  "Arquitectura de la información propuesta",
+        arq_c1_title:       "4 tareas evaluadas",
+        arq_c1_desc:        "Las 4 mostraron mejoras en la arquitectura propuesta respecto a la actual.",
+        arq_c2_title:       "Pago — sección más intuitiva",
+        arq_c2_desc:        "Fue la tarea con mejores resultados y mayor acierto entre los usuarios del tree testing.",
+        arq_c3_title:       "Tarjeta de embarque",
+        arq_c3_desc:        "Requirió reubicación, los usuarios no la encontraban en su posición original.",
+        label_antes:        "Antes",
+        label_despues:      "Después",
+        d1_antes:           "Vuelo de ida y vuelta en una misma pantalla",
+        d1_despues:         "Ida en una pantalla, vuelta en otra, claridad total en cada elección",
+        d2_antes:           "Personalización lineal obligatoria: el usuario debe pasar por todo",
+        d2_despues:         "Sección unificada donde el usuario elige qué quiere personalizar",
+        d3_antes:           "Maletas preseleccionadas que aumentan el precio sin aviso",
+        d3_despues:         "Selección limpia de equipaje, sin preselección, precio siempre visible",
+        d4_antes:           "Botones inconsistentes: difícil identificar qué es clickeable",
+        d4_despues:         "Sistema de botones con 5 variantes documentadas en el design system",
+        ds1_label:          "Tipografía + paleta",
+        ds1_title:          "Clan Pro + Lato · 5 colores base",
+        ds1_desc:           "Clan Pro para títulos (limpia y moderna). Lato para cuerpo de texto. Paleta con primarios de marca (#0F446C azul + #BC2133 rojo), neutros y colores semánticos para estados de error, advertencia y éxito.",
+        ds2_label:          "UX writing",
+        ds2_title:          "Reglas para cada tipo de texto",
+        ds2_desc:           "Botones: una sola palabra, sin puntuación. Errores: máximo un renglón, no juzgantes. Confirmaciones: cortas, amigables, pueden usar signo de exclamación. Precios: siempre con símbolo $ y tipo de moneda en el total.",
+        testeo_sub:         "3 usuarios · Remoto moderado · 15 min por sesión · 4 tareas",
+        testeo_funciono:    "Lo que funcionó",
+        testeo_no_funciono: "Lo que no funcionó → acción",
+        t_logro1:           "Sistema de filtros con palabras clave en búsqueda de tiquetes",
+        t_logro2:           "Menú de inicio intuitivo: evasión natural de errores",
+        t_logro3:           "Personalización de viaje condensada y comprensible",
+        t_logro4:           "Organización del equipaje clara y sin sorpresas",
+        t_reto1:            "No quedaba claro que el filtro era multiselección",
+        t_accion1:          "Rediseñar presentación visual del filtro",
+        t_reto2:            "Títulos de sección poco visibles en el proceso",
+        t_accion2:          "Mejorar contraste y color de indicadores de etapa",
+        prototipo_title:    "Prototipo final",
+        nav_prev:           "Proyecto anterior",
+        nav_prev_sub:       "Branding · Redes Sociales",
+        nav_next:           "Proyecto siguiente",
+        nav_next_sub:       "UX/UI · Diseño web · Conceptual",
+        footer_copy:        "© 2026 Todos los derechos reservados",
+        lightbox_hint:      "Click para hacer zoom · ESC para cerrar",
+        sobre_img: "../assets/img/jetsmart/tablaComparativa.svg",
       },
-      breakpoints: {
-      768: {
-        slidesPerView: 1.3,
-        spaceBetween: 15,
+
+      en: {
+        nav_proyectos:      "Projects",
+        nav_sobre:          "About me",
+        nav_contacto:       "Contact",
+        nav_contexto:       "Context",
+        nav_problema:       "Problem",
+        nav_encuesta:       "Survey & benchmarking",
+        nav_arquitectura:   "Architecture",
+        nav_decisiones:     "Design decisions",
+        nav_design:         "Design system",
+        nav_testeo:         "Testing & iteration",
+        hero_sub:           "Website redesign for a low-cost airline · Flight booking flow",
+        tag_conceptual:     "Conceptual",
+        stat_visitas:       "Monthly visits",
+        stat_rebote:        "bounce rate",
+        stat_viajes:        "Travel in Argentina",
+        stat_recomendacion: "Would recommend it",
+        contexto_label:     "Why redesign?",
+        contexto_desc:      "A site with millions of visits but a 37% bounce rate and 0% recommendation among surveyed users points to a serious structural UX problem. The site failed multiple usability heuristics that directly affected conversion and users' trust in the airline.",
+        problema_sub:       "Visual and structural",
+        p1_title:           "Mixed flights",
+        p1_desc:            "Outbound and return flights shown on the same screen. Users lost track of which flight they were selecting at any given moment.",
+        p2_title:           "Surprise luggage",
+        p2_desc:            "Baggage pre-selected by default, increasing the price without the user deciding. Generated immediate distrust.",
+        p3_title:           "Forced process",
+        p3_desc:            "Long, linear customisation that forced users through every step without being able to skip what they didn't need.",
+        p4_title:           "Overloaded home",
+        p4_desc:            "Too much content competing for attention. The flight search (the main feature) got lost among images and text.",
+        p5_title:           "Inconsistent buttons",
+        p5_desc:            "No default style. In some cases it wasn't clear what was a button and what wasn't.",
+        p6_title:           "Confusing seats",
+        p6_desc:            "Too much information in the seat selection. Users described the experience as confusing and overwhelming.",
+        problema_quote:     '"There\'s too much information when selecting a seat — it\'s confusing and overwhelming." — Surveyed user',
+        enc_label:          "12 respondents · 18–40 years old",
+        enc_title:          "User priorities when buying",
+        enc_desc:           "1. Comfort · 2. Security · 3. Price · 4. Deals. Users expect simplicity: a clear process where the final price is predictable and the flow doesn't catch them off guard.",
+        bench_label:        "Avianca · LATAM · Wingo",
+        bench_title:        "3 benchmarking insights",
+        bench_desc:         "1. Expandable information reduces visual load (Avianca). <br> 2. Purchase summary visible throughout the process builds trust (LATAM). <br> 3. Brief additional services allow quick decisions (Wingo)",
+        arq_antes_label:    "Current website information architecture",
+        arq_despues_label:  "Proposed information architecture",
+        arq_c1_title:       "4 tasks evaluated",
+        arq_c1_desc:        "All 4 showed improvements in the proposed architecture compared to the current one.",
+        arq_c2_title:       "Payment — most intuitive section",
+        arq_c2_desc:        "This was the task with the best results and highest accuracy among tree testing users.",
+        arq_c3_title:       "Boarding pass",
+        arq_c3_desc:        "Required relocation — users couldn't find it in its original position.",
+        label_antes:        "Before",
+        label_despues:      "After",
+        d1_antes:           "Outbound and return flights on the same screen",
+        d1_despues:         "Outbound on one screen, return on another — full clarity at each step",
+        d2_antes:           "Mandatory linear customisation: users must go through everything",
+        d2_despues:         "Unified section where users choose what they want to customise",
+        d3_antes:           "Pre-selected luggage that raises the price without warning",
+        d3_despues:         "Clean baggage selection, no pre-selection, price always visible",
+        d4_antes:           "Inconsistent buttons: hard to identify what's clickable",
+        d4_despues:         "Button system with 5 documented variants in the design system",
+        ds1_label:          "Typography + palette",
+        ds1_title:          "Clan Pro + Lato · 5 base colours",
+        ds1_desc:           "Clan Pro for headings (clean and modern). Lato for body text. Palette with brand primaries (#0F446C blue + #BC2133 red), neutrals and semantic colours for error, warning and success states.",
+        ds2_label:          "UX writing",
+        ds2_title:          "Rules for each type of text",
+        ds2_desc:           "Buttons: one word, no punctuation. Errors: one line max, non-judgemental. Confirmations: short, friendly, can use exclamation marks. Prices: always with $ symbol and currency type in the total.",
+        testeo_sub:         "3 users · Remote moderated · 15 min per session · 4 tasks",
+        testeo_funciono:    "What worked",
+        testeo_no_funciono: "What didn't work → action taken",
+        t_logro1:           "Keyword filter system in flight search",
+        t_logro2:           "Intuitive home menu: natural error avoidance",
+        t_logro3:           "Condensed and understandable trip customisation",
+        t_logro4:           "Clear luggage organisation with no surprises",
+        t_reto1:            "It wasn't clear the filter allowed multiple selections",
+        t_accion1:          "Redesign the visual presentation of the filter",
+        t_reto2:            "Section title indicators not visible enough in the process",
+        t_accion2:          "Improve contrast and colour of stage indicators",
+        prototipo_title:    "Final prototype",
+        nav_prev:           "Previous project",
+        nav_prev_sub:       "Branding · Social Media",
+        nav_next:           "Next project",
+        nav_next_sub:       "UX/UI · Web design · Conceptual",
+        footer_copy:        "© 2026 All rights reserved",
+        lightbox_hint:      "Click to zoom · ESC to close",
+        sobre_img: "../assets/img/jetsmart/tablaComparativa_Ingles.svg",
       },
-      // cuando el ancho de pantalla sea >= 1024px
-      1024: {
-        slidesPerView: 1.5,
-        spaceBetween: 100,
-      },
-      424: {
-        slidesPerView: 1,
-        spaceBetween: 50,
-      },
-      414: {
-        slidesPerView: 1,
-        spaceBetween: 50,
-      },
-      390: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      375: {
-        slidesPerView: 1,
-        spaceBetween: 180,
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 50,
-      },
-    },
+    };
+
+    /* ── Motor de traducción ── */
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function applyLang(lang) {
+      const t = translations[lang];
+      if (!t) return;
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+
+      document.documentElement.lang = lang;
+      document.getElementById('currentLang').textContent = lang.toUpperCase();
+
+      // Textos normales
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+
+      // Placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (t[key] !== undefined) el.placeholder = t[key];
+      });
+
+      // Actualizar data-label del bottom sheet (para el botón flotante)
+      document.querySelectorAll('.sheet-nav-link[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.dataset.label = t[key];
+      });
+
+      // Marcar activo en dropdown
+      document.querySelectorAll('[data-lang]').forEach(a => {
+        a.classList.toggle('active', a.dataset.lang === lang);
+      });
+
+      // Imágenes
+document.querySelectorAll('[data-i18n-img]').forEach(el => {
+  const key = el.dataset.i18nImg;
+  if (t[key]) el.src = t[key];
+});
+    }
+
+    applyLang(currentLang);
+
+    document.querySelectorAll('[data-lang]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        applyLang(a.dataset.lang);
+        document.getElementById('langDropdown').classList.remove('open');
+        document.getElementById('langBtn').classList.remove('open');
+        document.getElementById('langBtn').setAttribute('aria-expanded', false);
+      });
     });
   </script>
+
   <script>
-    window.addEventListener('scroll', function() {
-  const header = document.getElementById('headerProyectos');
-  if (window.scrollY > 50) {
-    header.classList.add('shrink');
-  } else {
-    header.classList.remove('shrink');
-  }
-});
+    const langBtn      = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+
+    langBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = langDropdown.classList.toggle('open');
+      langBtn.classList.toggle('open', open);
+      langBtn.setAttribute('aria-expanded', open);
+    });
+
+    langBtn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); langBtn.click(); }
+    });
+
+    const burgerBtn     = document.getElementById('burgerBtn');
+    const mobileMenu    = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function toggleMenu(force) {
+      const open = typeof force === 'boolean' ? force : !mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('open', open);
+      burgerBtn.classList.toggle('open', open);
+      burgerBtn.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    burgerBtn.addEventListener('click', e => { e.stopPropagation(); toggleMenu(); });
+    mobileOverlay.addEventListener('click', () => toggleMenu(false));
+
+    document.addEventListener('click', e => {
+      if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('open');
+        langBtn.classList.remove('open');
+        langBtn.setAttribute('aria-expanded', false);
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        toggleMenu(false);
+        langDropdown.classList.remove('open');
+        langBtn.classList.remove('open');
+        toggleSheet(false);
+      }
+    });
+
+    const sheetBtn      = document.getElementById('sheetBtn');
+    const sheetBtnLabel = document.getElementById('sheetBtnLabel');
+    const bottomSheet   = document.getElementById('bottomSheet');
+    const sheetOverlay  = document.getElementById('sheetOverlay');
+    const sheetLinks    = document.querySelectorAll('.sheet-nav-link');
+
+    function toggleSheet(force) {
+      const open = typeof force === 'boolean' ? force : !bottomSheet.classList.contains('open');
+      bottomSheet.classList.toggle('open', open);
+      sheetOverlay.classList.toggle('open', open);
+      bottomSheet.setAttribute('aria-hidden', !open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    sheetBtn.addEventListener('click', () => toggleSheet());
+    sheetOverlay.addEventListener('click', () => toggleSheet(false));
+    sheetLinks.forEach(link => {
+      link.addEventListener('click', () => setTimeout(() => toggleSheet(false), 120));
+    });
+
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks  = document.querySelectorAll('.project-nav-link');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = `#${entry.target.id}`;
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        sheetLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        const activeSheet = document.querySelector(`.sheet-nav-link[href="${id}"]`);
+        if (activeSheet) sheetBtnLabel.textContent = activeSheet.dataset.label;
+      });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+
+    sections.forEach(s => observer.observe(s));
   </script>
+
+  <script>
+    (function () {
+      const viewport = document.getElementById('resViewport');
+      const track    = document.getElementById('resTrack');
+      const dotsWrap = document.getElementById('resDots');
+      if (!viewport || !track) return;
+
+      const slides = Array.from(track.querySelectorAll('.resultados-slide'));
+      const GAP    = 24;
+      let current  = 0;
+      let isDragging = false, startX = 0, dragX = 0;
+
+      function slidesVisible() { return window.innerWidth <= 640 ? 1 : 2; }
+      function slideWidth() {
+        const visible = slidesVisible();
+        return (viewport.offsetWidth - GAP * (visible - 1)) / visible;
+      }
+      function setSizes() { const w = slideWidth(); slides.forEach(s => { s.style.width = w + 'px'; }); }
+      function maxIndex() { return Math.max(0, slides.length - slidesVisible()); }
+
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        for (let i = 0; i <= maxIndex(); i++) {
+          const d = document.createElement('button');
+          d.className = 'dot' + (i === 0 ? ' active' : '');
+          d.setAttribute('aria-label', `Slide ${i + 1}`);
+          d.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(d);
+        }
+      }
+
+      function updateDots() {
+        dotsWrap.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      function goTo(index) {
+        current = Math.max(0, Math.min(index, maxIndex()));
+        track.style.transform = `translateX(-${current * (slideWidth() + GAP)}px)`;
+        updateDots();
+      }
+
+      viewport.addEventListener('mousedown', e => {
+        isDragging = true; startX = e.clientX; dragX = 0;
+        track.style.transition = 'none';
+        viewport.classList.add('grabbing');
+      });
+      window.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        dragX = e.clientX - startX;
+        track.style.transform = `translateX(${-(current * (slideWidth() + GAP)) + dragX}px)`;
+      });
+      window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        viewport.classList.remove('grabbing');
+        track.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)';
+        const t = slideWidth() * 0.25;
+        if (dragX < -t) goTo(current + 1);
+        else if (dragX > t) goTo(current - 1);
+        else goTo(current);
+      });
+
+      let touchStart = 0, touchDelta = 0;
+      viewport.addEventListener('touchstart', e => {
+        touchStart = e.touches[0].clientX; touchDelta = 0;
+        track.style.transition = 'none';
+      }, { passive: true });
+      viewport.addEventListener('touchmove', e => {
+        touchDelta = e.touches[0].clientX - touchStart;
+        track.style.transform = `translateX(${-(current * (slideWidth() + GAP)) + touchDelta}px)`;
+      }, { passive: true });
+      viewport.addEventListener('touchend', () => {
+        track.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)';
+        const t = slideWidth() * 0.25;
+        if (touchDelta < -t) goTo(current + 1);
+        else if (touchDelta > t) goTo(current - 1);
+        else goTo(current);
+      });
+
+      window.addEventListener('resize', () => { setSizes(); buildDots(); goTo(Math.min(current, maxIndex())); });
+      setSizes(); buildDots(); goTo(0);
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const overlay  = document.getElementById('lightboxOverlay');
+      const imgEl    = document.getElementById('lightboxImg');
+      const wrap     = document.getElementById('lightboxWrap');
+      const closeBtn = document.getElementById('lightboxClose');
+      if (!overlay) return;
+
+      let isZoomed = false;
+
+      function openLightbox(src, alt) {
+        imgEl.src = src; imgEl.alt = alt || '';
+        isZoomed = false;
+        wrap.classList.remove('zoomed');
+        overlay.classList.remove('zoomed-active');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        overlay.classList.remove('open', 'zoomed-active');
+        wrap.classList.remove('zoomed');
+        isZoomed = false;
+        document.body.style.overflow = '';
+        setTimeout(() => { imgEl.src = ''; }, 300);
+      }
+
+      wrap.addEventListener('click', e => {
+        if (isZoomed) {
+          isZoomed = false;
+          wrap.classList.remove('zoomed');
+          overlay.classList.remove('zoomed-active');
+          wrap.style.removeProperty('--zoom-x');
+          wrap.style.removeProperty('--zoom-y');
+        } else {
+          const rect = imgEl.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1) + '%';
+          const y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1) + '%';
+          imgEl.style.setProperty('transform-origin', `${x} ${y}`);
+          isZoomed = true;
+          wrap.classList.add('zoomed');
+          overlay.classList.add('zoomed-active');
+        }
+      });
+
+      closeBtn.addEventListener('click', e => { e.stopPropagation(); closeLightbox(); });
+      overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+      document.addEventListener('click', e => {
+        const img = e.target.closest('img.zoomable');
+        if (!img) return;
+        openLightbox(img.src, img.alt);
+      });
+
+      let initialDist = 0, currentScale = 1;
+      overlay.addEventListener('touchstart', e => {
+        if (e.touches.length === 2) {
+          initialDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+        }
+      }, { passive: true });
+      overlay.addEventListener('touchmove', e => {
+        if (e.touches.length === 2) {
+          const dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+          currentScale = Math.min(4, Math.max(1, dist / initialDist * (isZoomed ? 2.5 : 1)));
+          imgEl.style.transform = `scale(${currentScale})`;
+        }
+      }, { passive: true });
+      overlay.addEventListener('touchend', e => {
+        if (e.touches.length < 2) {
+          if (currentScale > 1.4) { isZoomed = true; wrap.classList.add('zoomed'); overlay.classList.add('zoomed-active'); }
+          else { isZoomed = false; wrap.classList.remove('zoomed'); overlay.classList.remove('zoomed-active'); imgEl.style.transform = ''; currentScale = 1; }
+        }
+      });
+    })();
+  </script>
+
   </body>
 </html>
